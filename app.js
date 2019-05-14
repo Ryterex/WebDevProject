@@ -6,7 +6,9 @@ const cookieParser = require("cookie-parser");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
 const path = require("path");
-const users = require("./users");
+const collections = require("./data/collections");
+const userData=require("./data/users");
+const users=collections.users;
 const bcrypt = require ("bcrypt");
 const app = express();
 app.use(cookieParser());
@@ -43,13 +45,31 @@ app.get("/",async(req,res)=>{
 	try{
 		if(req.session.userID){
 			res.redirect("/private");}
-		else{res.render("../views/bars/hi",{title: "Hi!",css:"welcome.css"});}}
+		else{res.render("../views/bars/register",{title: "Hi!",css:"welcome",js:"register"});}}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
+app.get("/login/",async(req,res)=>{
+	try{
+		if(req.session.userID){
+			res.redirect("/private");}
+		else{res.render("../views/bars/login",{title: "Hi!",css:"welcome",js:"login"});}}
+	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
+app.post("/register",async(req,res)=>{
+	try{
+		let username=req.body.username;
+		let password=req.body.password;
+		let users=await userData.getAll();
+			for(let i=0;i<users.length();i++){
+				if (username===users[i].profile.username){
+					res.status(401).render("../views/bars/badreg",{title: "Uh-oh",css:"welcome",js:register});
+					return;}}
+		await userData.create(username,password);
+		res.redirect("/private");}
+	catch(e){res.status(500).json({error: "Internal Server Error"})}});
 
 app.post("/login", async(req, res) => {
 	try{
-		if(!req.body.username || !req.body.password){
-			res.status(401).render("../views/bars/bad",{title: "Error 401"});return;}
 		for(let i=0;i<users.length;i++){
 			let comp=await bcrypt.compare(req.body.password,users[i].hashedPassword);
 			if(users[i].username===req.body.username && comp){
@@ -63,11 +83,7 @@ app.post("/login", async(req, res) => {
 
 app.get("/private", async(req, res) => {
 	try{
-		let user=users[req.session.userID-1];//since 0 is considered bad
-		let name=user.firstName+" "+user.lastName;
-		let userlist=[];
-		userlist.push(user);
-		res.render("../views/bars/good",{title: "Private", personName: name, person: userlist});}
+		res.render("../views/bars/good",{title: "Private"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/logout", async(req, res) => {

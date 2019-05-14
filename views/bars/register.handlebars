@@ -2,7 +2,7 @@
 <main>
 	<img src="/media/ironman.png">
     <p>Sign up with your credentials below.</p>
-	<form id="login-form" method="POST" action="/login">
+	<form id="register-form" method="POST" action="/register">
 		<label for="username">Username:</label><br>
 		<input type="text" name="username" id="username"/><br><br>
 		<label for="password">Password:</label><br>
@@ -12,6 +12,7 @@
 		<button type="submit">Submit</button>
 	</form>
 	<p>Already have an account?</p>
-	<button onclick="window.location.href='/login/';">
+	<button onclick="window.location.href='/login';">
 		Login here</button>
+	<p id="error"></p>
 </main>
