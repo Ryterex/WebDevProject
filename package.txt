@@ -1,0 +1,19 @@
+{
+  "name": "webdevproject",
+  "version": "1.0.0",
+  "description": "Final Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpal39/WebDevProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpal39/WebDevProject/issues"
+  },
+  "homepage": "https://github.com/cpal39/WebDevProject#readme"
+}

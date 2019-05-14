@@ -1,19 +1,20 @@
 {
-  "name": "webdevproject",
+  "name": "lab10_cs546",
   "version": "1.0.0",
-  "description": "Final Project",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cpal39/WebDevProject.git"
-  },
-  "author": "",
+  "author": "Chris Paldino 10412928",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cpal39/WebDevProject/issues"
-  },
-  "homepage": "https://github.com/cpal39/WebDevProject#readme"
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "handlebars": "^4.1.2"
+  }
 }

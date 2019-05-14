@@ -1,0 +1,21 @@
+<h1>Details</h1>
+<h2>{{personName}}</h2>
+<main>
+	{{#each person}}
+	<dl>
+		<dt>ID</dt>
+		<dd>{{_id}}</dd>
+		<dt>Username</dt>
+		<dd>{{username}}</dd>
+		<dt>First Name</dt>
+		<dd>{{firstName}}</dd>
+		<dt>Last Name</dt>
+		<dd>{{lastName}}</dd>
+		<dt>Profession</dt>
+		<dd>{{profession}}</dd>
+		<dt>Bio</dt>
+		<dd>{{bio}}</dd>
+	</dl>
+	{{/each}}
+</main>
+<a href="/logout">Logout</a>
