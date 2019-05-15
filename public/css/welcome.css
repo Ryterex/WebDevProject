@@ -4,7 +4,6 @@ body{font-family: "Roboto",sans-serif;
 		color: white;
 		background-image: url("../media/space.jpg");
 		background-color: white;
-		font-weight: lighter;
 		font-size: 16pt}
 img{display: block;
 	margin-left: auto;
@@ -13,8 +12,7 @@ img{display: block;
 	height: auto;
 	float: right;}
 main{max-width: 75%; margin: auto;}
-h1 {color: red; font-size: 2em;
-	font-weight: lighter;}
+h1 {color: white; font-size: 2em;}
 button {color: red; width: 150px;
 	background-color: white;
 	font-weight: lighter;

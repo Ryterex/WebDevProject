@@ -6,9 +6,10 @@ const cookieParser = require("cookie-parser");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
 const path = require("path");
-const collections = require("./data/collections");
 const userData=require("./data/users");
+const collections = require("./data/collections");
 const users=collections.users;
+const connection=require("./data/connection");
 const bcrypt = require ("bcrypt");
 const app = express();
 app.use(cookieParser());
@@ -36,22 +37,22 @@ app.use(function(req,res,next){
 	console.log(log);
 	next();});
 
-app.use("/private/",function(req,res,next){
+app.use("/home/",function(req,res,next){
 	if(!req.session.userID){
-		res.status(403).render("../views/bars/no",{title: "Error 403"});}
+		res.status(403).render("../views/bars/denied",{title: "Denied",css:"denied"});}
 	else{next();}});
 
 app.get("/",async(req,res)=>{
 	try{
 		if(req.session.userID){
-			res.redirect("/private");}
+			res.redirect("/home");}
 		else{res.render("../views/bars/register",{title: "Hi!",css:"welcome",js:"register"});}}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/login/",async(req,res)=>{
 	try{
 		if(req.session.userID){
-			res.redirect("/private");}
+			res.redirect("/home");}
 		else{res.render("../views/bars/login",{title: "Hi!",css:"welcome",js:"login"});}}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
@@ -59,31 +60,37 @@ app.post("/register",async(req,res)=>{
 	try{
 		let username=req.body.username;
 		let password=req.body.password;
-		let users=await userData.getAll();
-			for(let i=0;i<users.length();i++){
-				if (username===users[i].profile.username){
-					res.status(401).render("../views/bars/badreg",{title: "Uh-oh",css:"welcome",js:register});
-					return;}}
-		await userData.create(username,password);
-		res.redirect("/private");}
+		let userlist=await userData.getAll();
+		for(let i=0;i<userlist.length;i++){
+			if (username===userlist[i].profile.username){
+				res.status(401).render("../views/bars/badreg",{title: "Uh-oh",css:"welcome",js:"register"});
+				return;}}
+		let x=await userData.create(username,password);
+		res.cookie("AuthCookie","yeet");
+		req.session.userID=x._id;//since 0 is considered bad
+		req.session.cookie.expires=false;
+		res.redirect("/home");}
 	catch(e){res.status(500).json({error: "Internal Server Error"})}});
 
 app.post("/login", async(req, res) => {
 	try{
-		for(let i=0;i<users.length;i++){
-			let comp=await bcrypt.compare(req.body.password,users[i].hashedPassword);
-			if(users[i].username===req.body.username && comp){
+		let username=req.body.username;
+		let password=req.body.password;
+		let userlist=await userData.getAll();
+		for(let i=0;i<userlist.length;i++){
+			let comp=await bcrypt.compare(password,userlist[i].hashPass);
+			if(userlist[i].profile.username===username && comp){
 				res.cookie("AuthCookie","yeet");
-				req.session.userID=i+1;//since 0 is considered bad
+				req.session.userID=userlist[i]._id;//since 0 is considered bad
 				req.session.cookie.expires=false;
-				res.redirect("/private");
+				res.redirect("/home");
 				return;}}
-		res.status(401).render("../views/bars/bad",{title: "Error 401"});}
+		res.status(401).render("../views/bars/badlog",{title: "Uh-oh",css:"welcome",js:"login"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
-app.get("/private", async(req, res) => {
+app.get("/home", async(req, res) => {
 	try{
-		res.render("../views/bars/good",{title: "Private"});}
+		res.render("../views/bars/home",{title: "Home"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/logout", async(req, res) => {
@@ -91,7 +98,7 @@ app.get("/logout", async(req, res) => {
 		res.cookie("AuthCookie",'',{expires: new Date(0)});
 		res.clearCookie("AuthCookie");
 		req.session.destroy();
-		res.render("../views/bars/bye",{title: "Logout"});}
+		res.render("../views/bars/bye",{title: "Bye!", css: "denied"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.listen(3000, () => {

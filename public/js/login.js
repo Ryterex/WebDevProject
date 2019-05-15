@@ -3,6 +3,6 @@ $(document).ready(function(){
 		let username=$("#username").val();
 		let password=$("#password").val();
 		if(!username || !password){
-			$('#error').text("Please provide a username and password.");}
+			$('#error').text("Please provide a username and password!");}
 		});
 	});

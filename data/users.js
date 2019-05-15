@@ -4,9 +4,9 @@ const {ObjectId} = require('mongodb');
 const bcrypt = require ("bcrypt");
 
 async function getAll() {
-	const userCollection = await users();
-	const users = await userCollection.find({}).toArray();
-	return users;}
+	const usCollection = await users();
+	const uss = await usCollection.find({}).toArray();
+	return uss;}
 
 async function get(id) {
   	if (!id) {throw "You must provide an id to search for";}
@@ -22,7 +22,11 @@ async function create(name,password){
 			username: name,
 			favChar: ""}};
   	const userCollection=await users();
-  	const insertInfo = await userCollection.insertOne(user);}
+  	const insertInfo = await userCollection.insertOne(user);
+	if (insertInfo.insertedCount === 0) {throw "Could not add animal";}
+  	const newId = insertInfo.insertedId;
+  	const us = await get(newId);
+  	return us;}
 
 module.exports = {
     firstName: "Chris",
