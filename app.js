@@ -15,7 +15,7 @@ const app = express();
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-app.engine("handlebars", exphbs({ defaultLayout: "result" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static(__dirname+"/public"));
 
@@ -49,7 +49,7 @@ app.get("/",async(req,res)=>{
 		else{res.render("../views/bars/register",{title: "Hi!",css:"welcome",js:"register"});}}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
-app.get("/login/",async(req,res)=>{
+app.get("/login",async(req,res)=>{
 	try{
 		if(req.session.userID){
 			res.redirect("/home");}
@@ -92,7 +92,7 @@ app.post("/login", async(req, res) => {
 
 app.get("/home", async(req, res) => {
 	try{
-		res.render("../views/bars/home",{title: "Home"});}
+		res.render("../views/bars/home",{title: "Home", css: "home"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/logout", async(req, res) => {

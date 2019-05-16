@@ -2,8 +2,9 @@
 body{font-family: "Roboto",sans-serif;
 		text-align: center;
 		color: white;
-		background-image: url("../media/space.jpg");
+		background-image: url("../media/vormir.jpg");
 		background-color: white;
+		background-size: cover;
 		font-size: 16pt}
 img{display: block;
 	margin-left: auto;
@@ -15,7 +16,7 @@ main{max-width: 75%; margin: auto;}
 h1 {color: white; font-size: 2em;}
 button {color: red; width: 150px;
 	background-color: white;
-	font-weight: lighter;
+	font-weight:lighter;
 	font-size: 16pt}
 a{color: red;
 	text-decoration: none}
