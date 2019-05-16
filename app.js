@@ -68,7 +68,7 @@ app.post("/register",async(req,res)=>{
 				return;}}
 		let x=await userData.create(username,password);
 		res.cookie("AuthCookie","yeet");
-		req.session.userID=x._id;//since 0 is considered bad
+		req.session.userID=x._id;
 		req.session.cookie.expires=false;
 		res.redirect("/home");}
 	catch(e){res.status(500).json({error: "Internal Server Error"})}});
@@ -82,12 +82,12 @@ app.post("/login", async(req, res) => {
 			let comp=await bcrypt.compare(password,userlist[i].hashPass);
 			if(username.toLowerCase()===userlist[i].profile.username.toLowerCase() && comp){
 				res.cookie("AuthCookie","yeet");
-				req.session.userID=userlist[i]._id;//since 0 is considered bad
+				req.session.userID=userlist[i]._id;
 				req.session.cookie.expires=false;
 				res.redirect("/home");
 				return;}}
 		res.status(401).render("../views/bars/login",
-			{title: "Uh-oh",css:"welcome",js:"login",error:"Please provie valid login credentials!"});}
+			{title: "Uh-oh",css:"welcome",js:"login",error:"Please provide valid login credentials!"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/home", async(req, res) => {
