@@ -4,11 +4,14 @@ body {
   background-image: url("../media/vormir.jpg");
   background-color: white;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #460000;
 }
 
 .topnav a {
@@ -21,12 +24,12 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #f7dcdc;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #ce3d50;
   color: white;
 }
 
@@ -61,9 +64,11 @@ select {
 }
 
 .button0 {
-  background-color: #a000de;
+  background-color: #4309af;
   color: white;
 }
+
+/*
 
 .button1,.button2,.button3 {
   background-color: #0318bb;
@@ -75,13 +80,14 @@ select {
   color: black;
 }
 
-.button1{
-  background-color: #00e5ff;
-  color: black;
+*/
+
+#personID {
+  width: 250px;
+  height: 20px;
 }
 
-input {
-  width: 250px;
-  height: 15px;
+.uni {
+  font-size: 25px;
 }
 
