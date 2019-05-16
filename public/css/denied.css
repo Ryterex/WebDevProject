@@ -7,7 +7,8 @@ body{font-family: "Roboto",sans-serif;
 		background-size: cover;
 		background-color: white;
 		font-weight: lighter;
-		font-size: 16pt}
+		font-size: 16pt;
+		overflow: hidden;}
 img{display: block;
 	margin-left: auto;
 	margin-right: auto;

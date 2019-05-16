@@ -5,7 +5,8 @@ body{font-family: "Roboto",sans-serif;
 		background-image: url("../media/vormir.jpg");
 		background-color: white;
 		background-size: cover;
-		font-size: 16pt}
+		font-size: 16pt;
+		overflow: hidden;}
 img{display: block;
 	margin-left: auto;
 	margin-right: auto;
