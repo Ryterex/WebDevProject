@@ -16,8 +16,11 @@ async function get(id) {
 	return user;}
 
 async function create(name,password){
+	let admin=0;
+	if(name==='MrStark'){admin=1;}
   	let user = {
 		hashPass: bcrypt.hashSync(password,16),
+		admin: 0,
 		profile:{
 			username: name,
 			favChar: ""}};

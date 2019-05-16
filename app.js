@@ -62,8 +62,9 @@ app.post("/register",async(req,res)=>{
 		let password=req.body.password;
 		let userlist=await userData.getAll();
 		for(let i=0;i<userlist.length;i++){
-			if (username===userlist[i].profile.username){
-				res.status(401).render("../views/bars/badreg",{title: "Uh-oh",css:"welcome",js:"register"});
+			if (username.toLowerCase()===userlist[i].profile.username.toLowerCase()){
+				res.status(401).render("../views/bars/register",
+					{title: "Uh-oh",css:"welcome",js:"register",error: "Username is taken!"});
 				return;}}
 		let x=await userData.create(username,password);
 		res.cookie("AuthCookie","yeet");
@@ -79,13 +80,14 @@ app.post("/login", async(req, res) => {
 		let userlist=await userData.getAll();
 		for(let i=0;i<userlist.length;i++){
 			let comp=await bcrypt.compare(password,userlist[i].hashPass);
-			if(userlist[i].profile.username===username && comp){
+			if(username.toLowerCase()===userlist[i].profile.username.toLowerCase() && comp){
 				res.cookie("AuthCookie","yeet");
 				req.session.userID=userlist[i]._id;//since 0 is considered bad
 				req.session.cookie.expires=false;
 				res.redirect("/home");
 				return;}}
-		res.status(401).render("../views/bars/badlog",{title: "Uh-oh",css:"welcome",js:"login"});}
+		res.status(401).render("../views/bars/login",
+			{title: "Uh-oh",css:"welcome",js:"login",error:"Please provie valid login credentials!"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/home", async(req, res) => {

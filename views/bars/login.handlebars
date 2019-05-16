@@ -1,7 +1,7 @@
 <h1>Hello There!</h1>
 <main>
 	<img src="/media/ironman.png">
-    <p>Login with your credentials below.</p>
+    <h3>Login with your credentials below.</h3>
 	<form id="login-form" method="POST" action="/login">
 		<label for="username">Username:</label><br>
 		<input type="text" name="username" id="username"/><br><br>
@@ -10,7 +10,6 @@
 		<button type="submit">Submit</button>
 	</form>
 	<p>Don't have an account?</p>
-	<button onclick="window.location.href='/';">
-		Register here</button>
-	<p id="error"></p>
+	<button onclick="window.location.href='/';">Register</button>
+	<p id="error">{{error}}</p>
 </main>
