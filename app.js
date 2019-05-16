@@ -100,7 +100,7 @@ app.get("/logout", async(req, res) => {
 		res.cookie("AuthCookie",'',{expires: new Date(0)});
 		res.clearCookie("AuthCookie");
 		req.session.destroy();
-		res.render("../views/bars/bye",{title: "Bye!", css: "denied"});}
+		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.listen(3000, () => {
