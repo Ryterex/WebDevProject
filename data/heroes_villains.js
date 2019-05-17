@@ -383,5 +383,27 @@ module.exports = [
         background: "Victor Stone is a former college athlete and football star. Following a horrible accident, his father Silas Stone, was able to save him via the use of a Mother Box that crafted cybernetics onto him. Victor then became known as the superhero Cyborg.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/b/b5/Cyborg_-_Promotional.png/revision/latest/scale-to-width-down/350?cb=20190326111907",
         comicLook: "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Cyborg_%28Victor_Stone%29.jpg/250px-Cyborg_%28Victor_Stone%29.jpg"
+    },
+    {
+        name: "David Kane",
+        altEgo: "Black Manta",
+        universe: "DCEU",
+        films: ["Aquaman"],
+        nemeses: ["Aquaman"],
+        powers: ["Superhuman Strength"],
+        background: "David Kane was a pirate like his father, Jesse Kane, and at some point in time, he learned about Aquaman and wanted to encounter him. He battles with Aquaman based on a deep-seeded grudge.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/e/ea/Aquaman_Black_Manta_Character_Textless_Poster.jpg/revision/latest?cb=20181123170655",
+        comicLook: "https://pbs.twimg.com/media/DibcflBV4AAYvv-.jpg"
+    },
+    {
+        name: "William Batson",
+        altEgo: "Shazam",
+        universe: "DCEU",
+        films: ["Shazam"],
+        nemeses: [],
+        powers: ["Superhuman Strength", "Superhuman Speed", "Flight", "Lightning"],
+        background: "William \"Billy\" Batson, known as Shazam, is an orphan chosen by the wizard Shazam to be his champion, granting him immense power to defend the innocent from evil.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Shazam_promotional_image.jpg/revision/latest/scale-to-width-down/350?cb=20180523181032",
+        comicLook: "https://www.dccomics.com/sites/default/files/imce/2018/12-DEC/Shazam1_1_5c089015b51a86.49890073.jpg"
     }
 ];
