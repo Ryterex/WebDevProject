@@ -1,5 +1,7 @@
 const users = require("./users");
+const characters = require("./characters");
 
 module.exports = {
-  users: userData
+  users: userData,
+  characters: charData
 };
