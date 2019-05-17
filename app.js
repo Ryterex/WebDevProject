@@ -97,8 +97,10 @@ app.get("/home", async(req, res) => {
 app.get("/home/settings",async(req,res)=>{
 	try{
 		let curuser=await userData.get(req.session.userID);
-		if(curuser.profile.favChar!==""){cur}
-		res.render("../views/bars/settings",{title: "Settings",css:"settings",status:curuser.status,username:curuser.profile.username,favChar:curuser.profile.favChar});}
+		console.log(curuser.status);
+		console.log(curuser.profile.favChar);
+		res.render("../views/bars/settings",{title: "Settings",css:"settings",status:curuser.status,
+		username:curuser.profile.username,favChar:curuser.profile.favChar});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/home/logout", async(req, res) => {
