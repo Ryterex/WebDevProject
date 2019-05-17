@@ -28,8 +28,8 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #f7dcdc;
-  color: black;
+  background-color: #ffffff45;
+  color: white;
 }
 
 .topnav a.active {
@@ -43,7 +43,7 @@ body {
   padding-left: 20px;
   padding-top: 20px;
   padding-right: 20px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.25);
   color: white;
 }
 
