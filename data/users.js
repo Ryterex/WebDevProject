@@ -26,7 +26,6 @@ async function create(name,password){
 			favChar: "None selected!"}};
   	const userCollection=await users();
   	const insertInfo = await userCollection.insertOne(user);
-	if (insertInfo.insertedCount === 0) {throw "Could not add animal";}
   	const newId = insertInfo.insertedId;
   	const us = await get(newId);
   	return us;}
