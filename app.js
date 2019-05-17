@@ -32,7 +32,6 @@ app.use(function(req,res,next){
 	let log={
 		CurrentTimestamp:new Date().toUTCString(),
 		RequestMethod: req.method,
-		RequestRoute: req.originalUrl,
 		IsAuthenticated: x};
 	console.log(log);
 	next();});
@@ -92,14 +91,14 @@ app.post("/login", async(req, res) => {
 
 app.get("/home", async(req, res) => {
 	try{
-		res.render("../views/bars/home",{title: "Home", css: "home"});}
+		res.render("../views/bars/home",{title: "Home", css: "home",js:"home"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/home/settings",async(req,res)=>{
 	try{
 		let curuser=await userData.get(req.session.userID);
 		if(curuser.profile.favChar!==""){cur}
-		res.render("../views/bars/settings",{title: "Hi!",css:"settings",status:curuser.status,username:curuser.profile.username,favChar:curuser.profile.favChar});}
+		res.render("../views/bars/settings",{title: "Settings",css:"settings",status:curuser.status,username:curuser.profile.username,favChar:curuser.profile.favChar});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/home/logout", async(req, res) => {
@@ -109,8 +108,6 @@ app.get("/home/logout", async(req, res) => {
 		req.session.destroy();
 		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
-
-
 
 app.listen(3000, () => {
   console.log("We've now got a server!");
