@@ -1,10 +1,10 @@
 <div class="topnav">
 	<a href="/">Home</a>
-	<a class="active" href="/home/settings">Settings</a>
- 	<a href="/home/logout">Logout</a>
+	<a class="active" href="/settings">Settings</a>
+ 	<a href="/logout">Logout</a>
 </div>
 <div class="content">
-	<h1>Details</h1>
+	<h2>Details</h2>
 	<ul>
 		<li>User Status: {{status}}
 			<li>Username: {{username}}</li>
@@ -20,5 +20,5 @@
 		<input type="password" name="password" id="password"/><br><br>
 		<button type="submit">Submit</button>
 	</form>
-	<p id="result"></p>
+	<p id="result">{{result}}</p>
 </div>

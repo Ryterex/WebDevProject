@@ -36,7 +36,7 @@ app.use(function(req,res,next){
 	console.log(log);
 	next();});
 
-app.use("/home/",function(req,res,next){
+app.use(["/home/","/settings/","/logout/"],function(req,res,next){
 	if(!req.session.userID){
 		res.status(403).render("../views/bars/denied",{title: "Denied",css:"denied"});}
 	else{next();}});
@@ -94,16 +94,29 @@ app.get("/home", async(req, res) => {
 		res.render("../views/bars/home",{title: "Home", css: "home",js:"home"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
-app.get("/home/settings",async(req,res)=>{
+app.get("/settings",async(req,res)=>{
 	try{
 		let curuser=await userData.get(req.session.userID);
-		console.log(curuser.status);
-		console.log(curuser.profile.favChar);
-		res.render("../views/bars/settings",{title: "Settings",css:"settings",status:curuser.status,
+		res.render("../views/bars/settings",{title: "Settings",css:"settings",js:"settings",status:curuser.status,
 		username:curuser.profile.username,favChar:curuser.profile.favChar});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
-app.get("/home/logout", async(req, res) => {
+app.post("/changepassword",async(req,res)=>{
+	try{
+		let newpass=req.body.newpassword;
+		let cpass=req.body.cpassword;
+		let oldpass=req.body.password;
+		let curuser=await userData.get(req.session.userID);
+		let comp=await bcrypt.compare(oldpass,curuser.hashPass);
+		if(!comp){
+			res.render("../views/bars/settings",{title: "Settings", css:"settings", js:"settings", status:curuser.status, username:curuser.profile.username, favChar:curuser.profile.favChar, result:"Incorrect old password!"});}
+		else{
+			await userData.changepass(curuser._id,newpass);
+			res.render("../views/bars/settings",{title: "Settings", css:"settings", js:"settings", status:curuser.status, username:curuser.profile.username, favChar:curuser.profile.favChar, result:"Success!"});}}
+	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
+
+app.get("/logout", async(req, res) => {
 	try{
 		res.cookie("AuthCookie",'',{expires: new Date(0)});
 		res.clearCookie("AuthCookie");
