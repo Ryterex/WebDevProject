@@ -20,7 +20,7 @@ async function create(name,password){
 	if(name==='MrStark'){admin=1;}
   	let user = {
 		hashPass: bcrypt.hashSync(password,16),
-		admin: 0,
+		status: admin,
 		profile:{
 			username: name,
 			favChar: ""}};

@@ -97,8 +97,10 @@ app.get("/home", async(req, res) => {
 
 app.get("/home/settings",async(req,res)=>{
 	try{
-		let curuser=userData.get(req.session.userID);
-		res.render("../views/bars/settings",{title: "Hi!",css:"settings"});}
+		let status="Standard";
+		let curuser=await userData.get(req.session.userID);
+		if(curuser.admin){status="Admin";}
+		res.render("../views/bars/settings",{title: "Hi!",css:"settings",status:status,userame:curuser.profile.username,favChar:curuser.profile.favChar});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
 app.get("/home/logout", async(req, res) => {
