@@ -482,5 +482,49 @@ module.exports = [
         background: "Thanos is a titan born on one of Saturn's moons. While he was peaceful as a child, he became fascinated and obsessed with death. He uses his knowledge to augment his powers in search of the embodiment of death.",
         movieLook: "https://specials-images.forbesimg.com/imageserve/5cc30b87a7ea436c70f3f17f/960x0.jpg?fit=scale",
         comicLook: "https://i.kinja-img.com/gawker-media/image/upload/s--qBvJrrAs--/c_scale,f_auto,fl_progressive,q_80,w_800/tb3valnfpsnxqxdbdtol.png"
+    },
+    {
+        name: "Wanda Maximoff",
+        altEgo: "Scarlet Witch",
+        universe: "MCU",
+        films: ["Captain America: Winter Soldier", "Captain America: Civil War", "Averngers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["Thanos"],
+        powers: ["magic"],
+        background: "Wanda is the child of Magneto and Magda. The Elder Gods gave Wanda the ability to use magic, which along with her mutant powers, made her very powerful.",
+        movieLook: "https://i.pinimg.com/originals/48/6b/ab/486bab95711f56e186b74eb94a5b5266.jpg",
+        comicLook: "https://i.pinimg.com/originals/f7/f3/e6/f7f3e65b5502a47ed775447f63f303ae.jpg"
+    },
+    {
+        name: "Rocket Raccoon",
+        altEgo: "Rocket Raccoon",
+        universe: "MCU",
+        films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["Thanos"],
+        powers: ["projectiles", "agility", "intelligence"],
+        background: "Rocket is a raccoon, but was the result of an experient that gave him increased speed and agility and human-like intelligence and speech.",
+        movieLook: "https://snworksceo.imgix.net/car/614a86c8-405f-4fd8-b60d-93998c769661.sized-1000x1000.jpg?w=800",
+        comicLook: "https://cdn.nexternal.com/dreamland/images/rocket_1_peterson.jpg"  
+    },
+    {
+        name: "Vision",
+        altEgo: "Vision",
+        universe: "MCU",
+        films: ["Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["Thanos"],
+        powers: ["intelligence", "flight", "magic"],
+        background: "Vision is an android created by Ultron for use against Ultron's creator and the Avengers. Vision is, however, convinced into joining the Avengers. He is part of a plan that would make him get close to the Scarlet Witch so that she does not have any children.",
+        movieLook: "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-marvel-the-avengers-paul-bettany.jpg",
+        comicLook: "https://hips.hearstapps.com/esq.h-cdn.co/assets/15/18/1430500341-age-of-ultron-vision-hd.jpg?resize=480:*"
+    },
+    {
+        name: "Nebula",
+        altEgo: "Nebula",
+        universe: "MCU",
+        films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["Thanos"],
+        powers: ["fighting skills", "projetciles", "agility"],
+        background: "Like her sister Gamora, Nebula was asdopted by Thanos as a child and learned and served under Ronan. She would often spar with Gamora, but would lose everytime, which disappointed Thanos, who decided to infuse her with mechanical parts.",
+        movieLook: "https://imgix.bustle.com/2017/5/3/edd9f1b6-7863-4d8d-87dd-11ed65c1ac5a.png?w=970&h=546&fit=crop&crop=faces&auto=format&q=70",
+        comicLook: "https://terrigen-cdn-dev.marvel.com/content/prod/1x/043neb_com_inl_06.jpg"
     }
 ];
