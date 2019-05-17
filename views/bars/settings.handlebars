@@ -4,11 +4,21 @@
  	<a href="/home/logout">Logout</a>
 </div>
 <div class="content">
-<h1>Details</h1>
-<ul>
-	<li>User Status: {{status}}
-	<li>Username: {{username}}</li>
-	<li>Favorite Character: {{favChar}}</li>
-</ul>
-
+	<h1>Details</h1>
+	<ul>
+		<li>User Status: {{status}}
+			<li>Username: {{username}}</li>
+			<li>Favorite Character: {{favChar}}</li>
+	</ul>
+	<h3>Change Password</h3>
+	<form id="changepassword-form" method="POST" action="/changepassword">
+		<label for="newpassword">New Password:</label><br>
+		<input type="password" name="newpassword" id="newpassword"/><br><br>
+		<label for="cpassword">Confirm New Password:</label><br>
+		<input type="password" name="cpassword" id="cpassword"/><br><br>
+		<label for="password">Old Password:</label><br>
+		<input type="password" name="password" id="password"/><br><br>
+		<button type="submit">Submit</button>
+	</form>
+	<p id="result"></p>
 </div>

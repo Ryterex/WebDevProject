@@ -7,14 +7,17 @@ body {
   	background-repeat: no-repeat;
   	background-attachment: fixed;
   	overflow: hidden;}
-
+button {color: purple; width: 150px;
+	background-color: white;
+	font-weight:lighter;
+	font-size: 16pt}
+#error{color: cyan}
 .topnav {
   	overflow: hidden;
   	background-color: indigo;
   	top: 0px;
   	position:fixed;
   	width: 100%;}
-
 .topnav a {
   	float: left;
   	color: #f2f2f2;
@@ -22,18 +25,16 @@ body {
   	padding: 14px 16px;
   	text-decoration: none;
   	font-size: 17px;}
-
 .topnav a:hover {
   	background-color: mediumpurple;}
-
 .topnav a.active {
 	background-color: blueviolet;
   	color: white;}
-
-.content {
+.content{
+	color: #f2f2f2;
+	font-size: 16pt;
 	overflow: hidden;
  	margin: 20px;
  	padding-left: 20px;
  	padding-top: 20px;
- 	padding-right: 20px;
-  	background: rgba(255, 255, 255, 0.4);}
+  	background: rgba(0, 0, 0, 0.3);}
