@@ -12,6 +12,7 @@
 		<input type="text" name="personName" id="personID">
 		<button class="button0" type="submit">Search</button>
 	</form>
+	<p id="error"></p>
 	<br><br>
 	<div class="select">
 	<p>Select Universe: </p>
@@ -21,84 +22,86 @@
 	</select>
 	<br><br>
 	<p>Filters: </p>
-	<input type="radio" id="name" name="drone" value="name" checked>
-  	<label for="name">Name (Default)</label>
-	<div class="divider"></div>
-	<input type="radio" id="power" name="drone" value="power">
-  	<label for="power">Power</label>
-	<select id="power">
-	  <option>Skilled fighter</option>
-	  <option">Heightened senses</option>
-	  <option>Super strength</option>
-	  <option>Atlantean</option>
-	  <option>Projectiles</option>
-	  <option>Flight</option>
-	  <option>Wall climbing</option>
-	  <option>Super speed</option>
-	  <option>Eye lasers</option>
-	  <option>Kryptonian</option>
-	  <option>Detective</option>
-	  <option>Super strength</option>
-	  <option>Frost breath</option>
-	  <option>Asgardian</option>
-	  <option>God of thunder</option>
-	  <option>Skilled sorcerer</option>
-	  <option>Skilled archer</option>
-	  <option>Heat powers</option>
-	  <option>Boomerang</option>
-	  <option>Pyrokinesis</option>
-	  <option>Telekinesis</option>
-	  <option>Teleportation</option>
-	  <option>Levitation</option>
-	  <option>HydroKinesis</option>
-	  <option>Lightning</option>
-	  <option>Space helmet</option>
-	  <option>Magic</option>
-	  <option>Mjolnir</option>
-	  <option>Resilience</option>
-	  <option>Foresight</option>
-	  <option>Finger-snapping</option>
-	  <option>Intelligence</option>
-	  <option>Agility</option>
-	  <option>Shrinking</option>
-	  <option>Goes up Thanos' big purple peach</option>
-	</select>
-	<div class="divider"></div>
-	<input type="radio" id="movie" name="drone" value="movie">
-  	<label for="movie">Movie</label>
-	<select id="mcu">
-	  <option>Iron Man</option>
-	  <option>The Incredible Hulk</option>
-	  <option>Iron Man 2</option>
-	  <option>Thor</option>
-	  <option>Captain America: The First Avenger</option>
-	  <option>Marvel's The Avengers</option>
-	  <option>Iron Man 3</option>
-	  <option>Thor: The Dark World</option>
-	  <option>Captain America: The Winter Soldier</option>
-	  <option>Guardians of the Galaxy</option>
-	  <option>Avengers: Age of Ultron</option>
-	  <option>Ant-Man</option>
-	  <option>Captain America: Civil War</option>
-	  <option>Doctor Strange</option>
-	  <option>Guardians of the Galaxy Vol. 2</option>
-	  <option>Spider-Man: Homecoming</option>
-	  <option>Thor: Ragnarok</option>
-	  <option>Black Panther</option>
-	  <option>Avengers: Infinity Wars</option>
-	  <option>Ant-Man and the Wasp</option>
-	  <option>Captain Marvel</option>
-	  <option>Avengers: Endgame</option>
-	</select>
-	<select id="dc">
-	  <option>Man of Steel</option>
-	  <option>Batman v Superman: Dawn of Justice</option>
-	  <option>Suicide Squad</option>
-	  <option>Wonder Woman</option>
-	  <option>Justice League</option>
-	  <option>Aquaman</option>
-	  <option>Shazam!</option>
-	</select>
+	<form id=myForm>
+		<input type="radio" id="name" name="drone" value="name" checked>
+	  	<label for="name">Name (Default)</label>
+		<div class="divider"></div>
+		<input type="radio" id="power" name="drone" value="power">
+	  	<label for="power">Power</label>
+		<select id="power" class="power">
+		  <option>Skilled fighter</option>
+		  <option">Heightened senses</option>
+		  <option>Super strength</option>
+		  <option>Atlantean</option>
+		  <option>Projectiles</option>
+		  <option>Flight</option>
+		  <option>Wall climbing</option>
+		  <option>Super speed</option>
+		  <option>Eye lasers</option>
+		  <option>Kryptonian</option>
+		  <option>Detective</option>
+		  <option>Super strength</option>
+		  <option>Frost breath</option>
+		  <option>Asgardian</option>
+		  <option>God of thunder</option>
+		  <option>Skilled sorcerer</option>
+		  <option>Skilled archer</option>
+		  <option>Heat powers</option>
+		  <option>Boomerang</option>
+		  <option>Pyrokinesis</option>
+		  <option>Telekinesis</option>
+		  <option>Teleportation</option>
+		  <option>Levitation</option>
+		  <option>HydroKinesis</option>
+		  <option>Lightning</option>
+		  <option>Space helmet</option>
+		  <option>Magic</option>
+		  <option>Mjolnir</option>
+		  <option>Resilience</option>
+		  <option>Foresight</option>
+		  <option>Finger-snapping</option>
+		  <option>Intelligence</option>
+		  <option>Agility</option>
+		  <option>Shrinking</option>
+		  <option>Goes up Thanos' big purple peach</option>
+		</select>
+		<div class="divider"></div>
+		<input type="radio" id="movie" name="drone" value="movie">
+	  	<label for="movie">Movie</label>
+		<select id="mcu" class="mcu">
+		  <option>Iron Man</option>
+		  <option>The Incredible Hulk</option>
+		  <option>Iron Man 2</option>
+		  <option>Thor</option>
+		  <option>Captain America: The First Avenger</option>
+		  <option>Marvel's The Avengers</option>
+		  <option>Iron Man 3</option>
+		  <option>Thor: The Dark World</option>
+		  <option>Captain America: The Winter Soldier</option>
+		  <option>Guardians of the Galaxy</option>
+		  <option>Avengers: Age of Ultron</option>
+		  <option>Ant-Man</option>
+		  <option>Captain America: Civil War</option>
+		  <option>Doctor Strange</option>
+		  <option>Guardians of the Galaxy Vol. 2</option>
+		  <option>Spider-Man: Homecoming</option>
+		  <option>Thor: Ragnarok</option>
+		  <option>Black Panther</option>
+		  <option>Avengers: Infinity Wars</option>
+		  <option>Ant-Man and the Wasp</option>
+		  <option>Captain Marvel</option>
+		  <option>Avengers: Endgame</option>
+		</select>
+		<select id="dc" class="dc">
+		  <option>Man of Steel</option>
+		  <option>Batman v Superman: Dawn of Justice</option>
+		  <option>Suicide Squad</option>
+		  <option>Wonder Woman</option>
+		  <option>Justice League</option>
+		  <option>Aquaman</option>
+		  <option>Shazam!</option>
+		</select>
+	</form>
 	</div>
 	<br><br><br><br><br><br><br><br><br><br>
 
