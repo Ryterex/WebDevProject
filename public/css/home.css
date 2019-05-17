@@ -94,7 +94,12 @@ select {
   display: none;
 }
 
-
+#error {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  padding-bottom: -20px;
+}
 
 #personID {
   width: 250px;

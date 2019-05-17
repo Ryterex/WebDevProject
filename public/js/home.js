@@ -11,17 +11,18 @@ $(document).ready(function(){
         }
     });
 
-    $('form.search').on('submit', function(e) {
-    	e.preventDefault();
-    	let name = $(this).find('input').val();
+    $('#search').on('submit', function(e) {
+    	let name = $("#personID").val();
     	let uni = $("select.uni").children("option:selected").val();
     	let filter = $('input[name=radioName]:checked', '#myForm').val();
     	let power = "";
     	let movie = "";
+    	
     	if (!name) {
-    		$(#error).text("Error: You must input a name!");
+    		$('#error').text("Error: You must input a name!");
+    		return false;
     	}
-
+    	
     	if (filter == "Power") {
     		power = $("select.power").children("option:selected").val();
     	}
@@ -31,6 +32,7 @@ $(document).ready(function(){
     	else if (filter == "Movie" && name == "DC") {
     		movie = $("select.mcu").children("option:selected").val();
     	}
+    	return true;
     });
 });
 
