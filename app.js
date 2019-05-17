@@ -7,8 +7,10 @@ const exphbs = require("express-handlebars");
 const session = require("express-session");
 const path = require("path");
 const userData=require("./data/users");
+const charData=require("./data/characters");
 const collections = require("./data/collections");
 const users=collections.users;
+const characters=collections.characters;
 const connection=require("./data/connection");
 const bcrypt = require ("bcrypt");
 const app = express();
@@ -123,6 +125,26 @@ app.get("/logout", async(req, res) => {
 		req.session.destroy();
 		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
+
+/*
+app.get("/details/:id", async (req, res) => {
+	try{
+		var peopleData = await getPeople();
+		let person = peopleData[req.params.id-1];
+		res.render("../views/posts/details", {
+			id: person.id,
+			firstName: person.firstName,
+			lastName: person.lastName,
+			address: person.address,
+			zip: person.zip,
+			phone: person.phone,
+			ssn: person.ssn, 
+			title: "Person Found"});
+	} catch (e) {
+		res.status(404).send();
+	}
+}); */
 
 app.listen(3000, () => {
   console.log("We've now got a server!");

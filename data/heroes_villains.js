@@ -148,7 +148,7 @@ module.exports = [
 		universe:"MCU",
 		films:["Iron Man", "Iron Man 2","Iron Man 3","Avengers: Age of Ultron","Captain America: Civil War","Avengers: Infinity War", "Avengers:Endgame"],
 		nemeses:[],
-		powers: ["Projectiles","Flight"],,
+		powers: ["Projectiles","Flight"],
 		background:"An officer in the U.S. Air Force and Tony Stark's close personal friend who later operates the War Machine armor.",
 		movieLook:"https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/6/60/War_Machine_Armor_%28Mark_IV%29.png/revision/latest?cb=20181230180717",
 		comicLook:"https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/29069/MAR082270_1._SX360_QL80_TTD_.jpg"
@@ -269,7 +269,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Suicide Squad"],
         nemeses: ["Batman"],
-        powers: ["Skilled Combatant"],
+        powers: ["Skilled fighter"],
         background: "Doctor Harleen Frances Quinzel is a former psychiatrist employed at Arkham Asylum and a known associate of the Joker, operating under the alias Harley Quinn. After assisting in the Joker's escape from Arkham, Harleen was submerged in a silo of chemicals at Ace Chemicals, re-emerging as the Joker's right hand woman.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/6/68/Margot_Robbie_as_harley_Quinn.jpg/revision/latest/scale-to-width-down/334?cb=20170109011841",
         comicLook: "https://i.kinja-img.com/gawker-media/image/upload/s--Ln7ORQFU--/c_scale,f_auto,fl_progressive,q_80,w_800/dcy7batxjotlk3udmokw.png"
@@ -280,7 +280,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Suicide Squad"],
         nemeses: [],
-        powers: ["Superhuman Strength", "Skilled Combatant"],
+        powers: ["Super strength", "Skilled fighter"],
         background: "Waylon Jones, known as Killer Croc, is a metahuman skilled crocodile wrestler, born with a genetic mutation which gave him reptilian skin, leading to him being nicknamed Killer Croc. He eventually turned to crime, and was chased out of Gotham City by Batman, only to be captured and recruited into Amanda Waller's Suicide Squad.",
         movieLook: "https://i.kinja-img.com/gawker-media/image/upload/s--Ln7ORQFU--/c_scale,f_auto,fl_progressive,q_80,w_800/dcy7batxjotlk3udmokw.png",
         comicLook: "https://www.dccomics.com/sites/default/files/GalleryChar_1920x1080_3_BW_10_09_57a3d09cb19d49.72084056.jpg"
@@ -291,7 +291,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Suicide Squad"],
         nemeses: [],
-        powers: ["Boomerang", "Skilled Combatant"],
+        powers: ["Boomerang", "Skilled fighter"],
         background: "George \"Digger\" Harkness was raised in poverty in the Australian town of Kurrumburra, the illegitimate child of an Australian woman and an American toy manufacturer. Harkness learned early how to develop boomerangs into weapons.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/d/de/Captain_Boomerang_-_Promo.jpg/revision/latest/scale-to-width-down/343?cb=20160719174104",
         comicLook: "http://www3.pictures.zimbio.com/mp/JQKXyzNFrx2l.jpg"
@@ -302,7 +302,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Suicide Squad"],
         nemeses: [],
-        powers: ["Pyrokinesis", "Skilled Combatant"],
+        powers: ["Pyrokinesis", "Skilled fighter"],
         background: "Chato Santana, also known as El Diablo, was a metahuman criminal of Hispanic descent, and a member of Task Force X. While initially reluctant to use his pyrokinetic powers out of guilt and fear, he would ultimately sacrifice his life in order to defeat Incubus and save the world from Enchantress.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/d/df/Suicide_Squad_-_Poster_-_El_Diablo.jpg/revision/latest/scale-to-width-down/343?cb=20160620233843",
         comicLook: "https://en.wikipedia.org/wiki/El_Diablo_(comics)#/media/File:El_Diablo_comic_book_cover_(vol._2_no._16).jpg"
@@ -313,7 +313,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Suicide Squad"],
         nemeses: [],
-        powers: ["Superhuman Strength", "Telekinesis", "Teleportation"],
+        powers: ["Super strength", "Telekinesis", "Teleportation"],
         background: "Enchantress was an ancient and inter-dimensional mystical being, who possessed the body of June Moone. Initially under Amanda Waller's control, Enchantress was viewed as one of the candidates for Suicide Squad membership, but the malevolent witch swiftly escaped, freeing her brother Incubus and attempting to take over Earth with their combined mystical powers.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/2/29/Enchantress_2.jpg/revision/latest/scale-to-width-down/335?cb=20180123204154",
         comicLook: "https://en.wikipedia.org/wiki/Enchantress_(DC_Comics)#/media/File:Enchantress_DC_Comics.png"
@@ -324,7 +324,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Suicide Squad"],
         nemeses: [],
-        powers: ["Skilled Combatant"],
+        powers: ["Skilled fighter"],
         background: "Tatsu Yamashiro is a Japanese samurai assassin code-named Katana (after her weapon of choice). Tatsu is an infamous master of swordplay and martial arts, trained to the highest level in the ancient art form. She is a proxy member of the Suicide Squad, and, of note, the only voluntary member as Rick Flag's personal bodyguard.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/3/33/CB14_520_PORTRAIT_015.jpg/revision/latest/scale-to-width-down/322?cb=20161118173951",
         comicLook: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Tatsu_Yamashiro_%28comic_superheroine%2C_modern_incarnation%29.jpg/250px-Tatsu_Yamashiro_%28comic_superheroine%2C_modern_incarnation%29.jpg"
@@ -335,7 +335,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Batman v Superman: Dawn of Justice", "Wonder Woman", "Justice League"],
         nemeses: [],
-        powers: ["Superhuman Strength", "Superhuman Speed", "Levitation", "Skilled Combatant"],
+        powers: ["Super strength", "Super speed", "Levitation", "Skilled fighter"],
         background: "Princess Diana of Themyscira is an Amazonian warrior princess and one of the world's first superheroes, known as Wonder Woman. She is the daughter of Queen Hippolyta and Zeus, king of the Olympians. Born on Themyscira, Diana was raised in paradise, hearing tales of her the Amazons' great task of defeating the God of War, Ares, and bringing peace to the world, ushering in a new era of peace to the world.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/a/a0/Wonder_Woman_in_the_1980s.png/revision/latest/scale-to-width-down/350?cb=20180616110232",
         comicLook: "https://www.dccomics.com/sites/default/files/dc-Comics_Gallery_20181212__WW_Cv60_5c0b522552f088.84553519.jpg"
@@ -346,7 +346,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Wonder Woman"],
         nemeses: [],
-        powers: ["Superhuman Strength"],
+        powers: ["Super strength"],
         background: "Ares was the Old God of War, and the most fearsome son of Zeus, who was worshiped by the Ancient Greeks and Romans (though the latter civilization would give him the name Mars)",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/0/05/Ares.png/revision/latest/scale-to-width-down/350?cb=20171104040212",
         comicLook: "https://static.comicvine.com/uploads/original/5/57746/2557160-ares.png"
@@ -357,7 +357,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League"],
         nemeses: [],
-        powers: ["Superhuman Speed"],
+        powers: ["Super speed"],
         background: "Barry Allen is a student at Central City University who was struck by lightning, gaining the ability to think and move at incredible superhuman speeds. Using these powers, he became the vigilante hero known as the Flash.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Justice_League_-_Flash.jpg/revision/latest/scale-to-width-down/350?cb=20181122000948",
         comicLook: "https://qph.fs.quoracdn.net/main-qimg-c81e83865d8209a2c679cb22c4e0885f"
@@ -368,7 +368,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League", "Aquaman"],
         nemeses: ["Black Manta"],
-        powers: ["Altantean", "Superhuman Strength", "Superhuman Speed", "HydroKinesis"],
+        powers: ["Altantean", "Super strength", "Super speed", "HydroKinesis"],
         background: "Arthur Curry is the King of Atlantis, as well as the superhero known as Aquaman. While initially reserved and content with his isolation from the surface world, Aquaman would eventually be recruited by Batman to join the Justice League in order to help defend Earth against the forces of Steppenwolf and his Parademon army.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/a/a9/Aquaman_Arthur_Curry_Character_Textless_Poster.jpg/revision/latest/scale-to-width-down/337?cb=20181123170241",
         comicLook: "https://qph.fs.quoracdn.net/main-qimg-463c8074f3fe066718026cf3322f9a4a"
@@ -390,7 +390,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Aquaman"],
         nemeses: ["Aquaman"],
-        powers: ["Superhuman Strength"],
+        powers: ["Super Strength"],
         background: "David Kane was a pirate like his father, Jesse Kane, and at some point in time, he learned about Aquaman and wanted to encounter him. He battles with Aquaman based on a deep-seeded grudge.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/e/ea/Aquaman_Black_Manta_Character_Textless_Poster.jpg/revision/latest?cb=20181123170655",
         comicLook: "https://pbs.twimg.com/media/DibcflBV4AAYvv-.jpg"
@@ -401,7 +401,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Shazam"],
         nemeses: [],
-        powers: ["Superhuman Strength", "Superhuman Speed", "Flight", "Lightning"],
+        powers: ["Superhuman Strength", "Super Speed", "Flight", "Lightning"],
         background: "William \"Billy\" Batson, known as Shazam, is an orphan chosen by the wizard Shazam to be his champion, granting him immense power to defend the innocent from evil.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Shazam_promotional_image.jpg/revision/latest/scale-to-width-down/350?cb=20180523181032",
         comicLook: "https://www.dccomics.com/sites/default/files/imce/2018/12-DEC/Shazam1_1_5c089015b51a86.49890073.jpg"
@@ -412,7 +412,7 @@ module.exports = [
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Ronan", "Thanos"],
-        powers: ["skilled fighter", "flight", "space helmet", "projectiles"],
+        powers: ["Skilled fighter", "Flight", "Space helmet", "Projectiles"],
         background: "Peter Quill was born in Missouri to a human mom and a Celestial. He was one of many born by the Celestial, whose plan was to create a second Celestial. Shortly after the death of Peter's mother, Peter was abducted by a group called the Ravagers. Yondu, the leader took him in as part of the crew and taught him combat and survival skills.",
         movieLook: "https://static.tvtropes.org/pmwiki/pub/images/starlordinfinitywar.png",
         comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/119015/DIG024434_1._SX360_QL80_TTD_.jpg"
@@ -423,7 +423,7 @@ module.exports = [
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["skilled fighter", "strength"],
+        powers: ["Skilled fighter", "Super strength"],
         background: "Gamora was taken in by Thanos after he killed half of the population of her people. She was trained under Ronan along with her sister Nebula. Eventually, she joins Star-Lord against Thanos.",
         movieLook: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gamora-avengers-infinity-war-1556117108.jpg?crop=1xw:1xh;center,top&resize=480:*",
         comicLook: "https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/17/1524838232-gamora-guardians-of-the-galaxy-comic.jpg?resize=480:*"
@@ -434,7 +434,7 @@ module.exports = [
         universe: "MCU",
         films: ["Thor: Ragnorak"],
         nemeses: ["Thor"],
-        powers: ["strength", "magic", "mjolnir"],
+        powers: ["Super strength", "Magic", "Mjolnir"],
         background: "Hela is the oldest child of Odin and fought along side him in his battles. However, when Odin noticed her ambition outgrew his, he fought her and banished her from Asgard. After Odin's death, she broke free and looked to continue her conquest.",
         movieLook: "https://i.ytimg.com/vi/EoMbkpY4quw/maxresdefault.jpg",
         comicLook: "https://i.pinimg.com/originals/b1/db/28/b1db282ffc319c4ec12b02f7377b8d4a.jpg"
@@ -445,7 +445,7 @@ module.exports = [
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos","Ronan"],
-        powers: ["strength", "resilience", ""],
+        powers: ["Super strength", "Resilience", "Skilled fighter"],
         background: "Arthur Miller was a human whose family was killed by Thanos. Kronos needed a champion to battle Thanos, so he put Arthur's spirit in a more capable body.",
         movieLook: "https://cdn3.movieweb.com/i/article/WK46qR95CkQJxI4pmfUll14nh6XIeI/798:50/How-Thanos-Killed-Drax-Family-Infinity-War.jpg",
         comicLook: "https://i.annihil.us/u/prod/marvel/i/mg/c/c0/57dc0f9e9dc31/clean.jpg"
@@ -456,7 +456,7 @@ module.exports = [
        universe: "MCU",
        films: ["Doctor Strange", "Avengers: Infinity War", "Avengers: Endgame"],
        nemeses: ["Dormammu"],
-       powers: ["magic", "foresight"],
+       powers: ["Magic", "Foresight"],
        background: "Stange was a surgeon whose hands were crippled in a car crash, leaving him unable to perform surgeries. To proud to get a teaching job, he desperately seacrhed for ways to fix his hands. He found the Ancient One, and ultimately joined him, which granted him his powers.",
        movieLook: "data:image/jpeg;base64,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",
        comicLook: "https://d1466nnw0ex81e.cloudfront.net/n_iv/600/633545.jpg"
@@ -467,7 +467,7 @@ module.exports = [
         universe: "MCU",
         films: ["Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["The Avengers"],
-        powers: ["strength", "finger-snapping", "intelligene"],
+        powers: ["Super strength", "Finger-snapping", "Intelligence"],
         background: "Thanos is a titan born on one of Saturn's moons. While he was peaceful as a child, he became fascinated and obsessed with death. He uses his knowledge to augment his powers in search of the embodiment of death.",
         movieLook: "https://specials-images.forbesimg.com/imageserve/5cc30b87a7ea436c70f3f17f/960x0.jpg?fit=scale",
         comicLook: "https://i.kinja-img.com/gawker-media/image/upload/s--qBvJrrAs--/c_scale,f_auto,fl_progressive,q_80,w_800/tb3valnfpsnxqxdbdtol.png"
@@ -478,7 +478,7 @@ module.exports = [
         universe: "MCU",
         films: ["Captain America: Winter Soldier", "Captain America: Civil War", "Averngers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["magic"],
+        powers: ["Magic"],
         background: "Wanda is the child of Magneto and Magda. The Elder Gods gave Wanda the ability to use magic, which along with her mutant powers, made her very powerful.",
         movieLook: "https://i.pinimg.com/originals/48/6b/ab/486bab95711f56e186b74eb94a5b5266.jpg",
         comicLook: "https://i.pinimg.com/originals/f7/f3/e6/f7f3e65b5502a47ed775447f63f303ae.jpg"
@@ -489,7 +489,7 @@ module.exports = [
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["projectiles", "agility", "intelligence"],
+        powers: ["Projectiles", "Agility", "Intelligence"],
         background: "Rocket is a raccoon, but was the result of an experient that gave him increased speed and agility and human-like intelligence and speech.",
         movieLook: "https://snworksceo.imgix.net/car/614a86c8-405f-4fd8-b60d-93998c769661.sized-1000x1000.jpg?w=800",
         comicLook: "https://cdn.nexternal.com/dreamland/images/rocket_1_peterson.jpg"  
@@ -500,7 +500,7 @@ module.exports = [
         universe: "MCU",
         films: ["Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["intelligence", "flight", "magic"],
+        powers: ["Intelligence", "Flight", "Magic"],
         background: "Vision is an android created by Ultron for use against Ultron's creator and the Avengers. Vision is, however, convinced into joining the Avengers. He is part of a plan that would make him get close to the Scarlet Witch so that she does not have any children.",
         movieLook: "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-marvel-the-avengers-paul-bettany.jpg",
         comicLook: "https://hips.hearstapps.com/esq.h-cdn.co/assets/15/18/1430500341-age-of-ultron-vision-hd.jpg?resize=480:*"
@@ -511,7 +511,7 @@ module.exports = [
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["fighting skills", "projetciles", "agility"],
+        powers: ["Skilled fighter", "Projetciles", "Agility"],
         background: "Like her sister Gamora, Nebula was asdopted by Thanos as a child and learned and served under Ronan. She would often spar with Gamora, but would lose everytime, which disappointed Thanos, who decided to infuse her with mechanical parts.",
         movieLook: "https://imgix.bustle.com/2017/5/3/edd9f1b6-7863-4d8d-87dd-11ed65c1ac5a.png?w=970&h=546&fit=crop&crop=faces&auto=format&q=70",
         comicLook: "https://terrigen-cdn-dev.marvel.com/content/prod/1x/043neb_com_inl_06.jpg"
@@ -522,7 +522,7 @@ module.exports = [
         universe: "MCU",
         films: ["Ant-Man", "Ant-Man and the Wasp", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["shrinking", "strength", "goes up Thanos' big purple peach"],
+        powers: ["Shrinking", "Super strength", "Goes up Thanos' big purple peach"],
         background: "Scott was an electrician who turned to crime to support his family. In prison, he furthured his knowledge of electronics and was eventually hired by Tony Stark.",
         movieLook: "https://cdn.jwplayer.com/thumbs/8UlPSTXX-720.jpg",
         comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/693929/693929._SX360_QL80_TTD_.jpg"
@@ -533,7 +533,7 @@ module.exports = [
         universe: "MCU",
         films: ["Spider-Man: Homecoming"],
         nemeses: ["Spider-Man"],
-        powers: ["flight", "strength"],
+        powers: ["Flight", "Super strength"],
         background: "Adrian was an engineer who developed a flight suit. After finding out he lost his job, he became enraged, destroying the company and taking his suit. Realizing the suit gave him strength, he turned to crime.",
         movieLook: "https://pixel.nymag.com/imgs/daily/vulture/2017/07/05/05-keaton-spiderman-2.w700.h700.jpg",
         comicLook: "https://pixel.nymag.com/imgs/daily/vulture/2016/12/23/23-spiderman.w700.h700.jpg"
