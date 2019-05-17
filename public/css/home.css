@@ -6,12 +6,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
 
 }
 
 .topnav {
   overflow: hidden;
   background-color: #460000;
+  top: 0px;
+  position:fixed;
+  width: 100%;
 }
 
 .topnav a {
@@ -34,9 +38,10 @@ body {
 }
 
 .content {
+	overflow: hidden;
   margin: 20px;
   padding-left: 20px;
-  padding-top: 2px;
+  padding-top: 20px;
   padding-right: 20px;
   background: rgba(255, 255, 255, 0.4);
 }
@@ -90,4 +95,3 @@ select {
 .uni {
   font-size: 25px;
 }
-

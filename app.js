@@ -95,13 +95,21 @@ app.get("/home", async(req, res) => {
 		res.render("../views/bars/home",{title: "Home", css: "home"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
-app.get("/logout", async(req, res) => {
+app.get("/home/settings",async(req,res)=>{
+	try{
+		let curuser=userData.get(req.session.userID);
+		res.render("../views/bars/settings",{title: "Hi!",css:"settings"});}
+	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
+app.get("/home/logout", async(req, res) => {
 	try{
 		res.cookie("AuthCookie",'',{expires: new Date(0)});
 		res.clearCookie("AuthCookie");
 		req.session.destroy();
 		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
+
 
 app.listen(3000, () => {
   console.log("We've now got a server!");
