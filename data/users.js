@@ -16,14 +16,14 @@ async function get(id) {
 	return user;}
 
 async function create(name,password){
-	let admin=0;
-	if(name==='MrStark'){admin=1;}
+	let status="Standard User";
+	if(name==='MrStark'){status="Admin";}
   	let user = {
 		hashPass: bcrypt.hashSync(password,16),
-		status: admin,
+		status: status,
 		profile:{
 			username: name,
-			favChar: ""}};
+			favChar: "None selected!"}};
   	const userCollection=await users();
   	const insertInfo = await userCollection.insertOne(user);
 	if (insertInfo.insertedCount === 0) {throw "Could not add animal";}
