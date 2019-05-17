@@ -30,10 +30,17 @@ async function create(name,password){
   	const us = await get(newId);
   	return us;}
 
+async function changepass(id, newpass) {
+	let newhash=bcrypt.hashSync(newpass,16);
+  	const userCollection = await users();
+  	const updatedInfo = await userCollection.updateOne({ _id: ObjectId(id)},
+		{$set: {hashPass: newhash}});}
+
 module.exports = {
     firstName: "Chris",
     lastName: "Paldino",
     studentId: "10412928",
     getAll,
     get,
-    create};
+    create,
+	changepass};

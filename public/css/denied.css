@@ -5,6 +5,7 @@ body{font-family: "Roboto",sans-serif;
 	background-image: url("../media/ship.jpg");
 	background-position: right;
 	background-size: cover;
+	background-attachment: fixed;
 	background-color: white;
 	font-weight: lighter;
 	font-size: 16pt;
