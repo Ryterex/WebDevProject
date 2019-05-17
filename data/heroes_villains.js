@@ -515,5 +515,27 @@ module.exports = [
         background: "Like her sister Gamora, Nebula was asdopted by Thanos as a child and learned and served under Ronan. She would often spar with Gamora, but would lose everytime, which disappointed Thanos, who decided to infuse her with mechanical parts.",
         movieLook: "https://imgix.bustle.com/2017/5/3/edd9f1b6-7863-4d8d-87dd-11ed65c1ac5a.png?w=970&h=546&fit=crop&crop=faces&auto=format&q=70",
         comicLook: "https://terrigen-cdn-dev.marvel.com/content/prod/1x/043neb_com_inl_06.jpg"
+    },
+    {
+        name: "Scott Lan",
+        altEgo: "Ant-Man",
+        universe: "MCU",
+        films: ["Ant-Man", "Ant-Man and the Wasp", "Avengers: Endgame"],
+        nemeses: ["Thanos"],
+        powers: ["shrinking", "strength", "goes up Thanos' big purple peach"],
+        background: "Scott was an electrician who turned to crime to support his family. In prison, he furthured his knowledge of electronics and was eventually hired by Tony Stark.",
+        movieLook: "https://cdn.jwplayer.com/thumbs/8UlPSTXX-720.jpg",
+        comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/693929/693929._SX360_QL80_TTD_.jpg"
+    },
+    {
+        name: "Adrian Toomes",
+        altEgo: "Vulture",
+        universe: "MCU",
+        films: ["Spider-Man: Homecoming"],
+        nemeses: ["Spider-Man"],
+        powers: ["flight", "strength"],
+        background: "Adrian was an engineer who developed a flight suit. After finding out he lost his job, he became enraged, destroying the company and taking his suit. Realizing the suit gave him strength, he turned to crime.",
+        movieLook: "https://pixel.nymag.com/imgs/daily/vulture/2017/07/05/05-keaton-spiderman-2.w700.h700.jpg",
+        comicLook: "https://pixel.nymag.com/imgs/daily/vulture/2016/12/23/23-spiderman.w700.h700.jpg"
     }
 ];
