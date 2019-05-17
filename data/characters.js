@@ -1,5 +1,6 @@
 const collections = require("./collections");
 const characters = collections.characters;
+const charList = require("./heroes_villians");
 const {ObjectId} = require('mongodb');
 
 async function getAll() {
@@ -14,3 +15,16 @@ async function get(id) {
   	if (char === null) {return false;}
 	return char;}
 
+async function create(){
+	const charCollection = await characters();
+	for(var i=0; i< charList.length; i++){
+		const insertInfo = await userCollection.insertOne(characters[i]);
+		if (insertInfo.insertedCount === 0){throw "Could not add character";}
+	}
+}
+
+module.exports = {
+	getAll,
+	get,
+	create
+};
