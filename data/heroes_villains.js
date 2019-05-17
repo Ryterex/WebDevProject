@@ -405,5 +405,49 @@ module.exports = [
         background: "William \"Billy\" Batson, known as Shazam, is an orphan chosen by the wizard Shazam to be his champion, granting him immense power to defend the innocent from evil.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Shazam_promotional_image.jpg/revision/latest/scale-to-width-down/350?cb=20180523181032",
         comicLook: "https://www.dccomics.com/sites/default/files/imce/2018/12-DEC/Shazam1_1_5c089015b51a86.49890073.jpg"
+    },
+    {
+        name: "Peter Quill",
+        altEgo: "Star-Lord",
+        universe: "MCU",
+        films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["Ronan", "Thanos"],
+        powers: ["skilled fighter", "flight", "space helmet", "projectiles"],
+        background: "Peter Quill was born in Missouri to a human mom and a Celestial. He was one of many born by the Celestial, whose plan was to create a second Celestial. Shortly after the death of Peter's mother, Peter was abducted by a group called the Ravagers. Yondu, the leader took him in as part of the crew and taught him combat and survival skills.",
+        movieLook: "https://static.tvtropes.org/pmwiki/pub/images/starlordinfinitywar.png",
+        comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/119015/DIG024434_1._SX360_QL80_TTD_.jpg"
+    },
+    {
+        name: "Gamora",
+        altEgo: "Little One",
+        universe: "MCU",
+        films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["Thanos"],
+        powers: ["skilled fighter", "strength"],
+        background: "Gamora was taken in by Thanos after he killed half of the population of her people. She was trained under Ronan along with her sister Nebula. Eventually, she joins Star-Lord against Thanos.",
+        movieLook: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gamora-avengers-infinity-war-1556117108.jpg?crop=1xw:1xh;center,top&resize=480:*",
+        comicLook: "https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/17/1524838232-gamora-guardians-of-the-galaxy-comic.jpg?resize=480:*"
+    },
+    {
+        name: "Venom",
+        altEgo: "Venom",
+        universe: "MCU",
+        films: ["Spiderman 3", "Venom"],
+        nemeses: ["Spider-Man"],
+        powers: ["strength", "wall climbing", "projectiles", "shape-shifting", "long tongue", "spider-sense"],
+        background: "Venom is a goo-like organism from space that was found by Peter Parker. It disguised itself as one of his suits, and upon wearing it, Peter notices that the organism stuck to him. He was eventually able to rid himself of venom, finding out it is scared of fire and sound. Venom finds another host, however, one that shared its hatred of Spider-Man.",
+        movieLook: "https://www.rollingstone.com/wp-content/uploads/2018/10/venom-history-of.jpg?crop=900:600&width=440",
+        comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/425668/425668._SX1280_QL80_TTD_.jpg"   
+    },
+    {
+        name: "Hela",
+        altEgo: "Hela",
+        universe: "MCU",
+        films: ["Thor: Ragnorak"],
+        nemeses: ["Thor"],
+        powers: ["strength", "magic", "mjolnir"],
+        background: "Hela is the oldest child of Odin and fought along side him in his battles. However, when Odin noticed her ambition outgrew his, he fought her and banished her from Asgard. After Odin's death, she broke free and looked to continue her conquest.",
+        movieLook: "https://i.ytimg.com/vi/EoMbkpY4quw/maxresdefault.jpg",
+        comicLook: "https://i.pinimg.com/originals/b1/db/28/b1db282ffc319c4ec12b02f7377b8d4a.jpg"
     }
 ];
