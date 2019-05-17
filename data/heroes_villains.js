@@ -251,5 +251,137 @@ module.exports = [
 		background: "Sergeant James Buchanan \"Bucky\" Barnes is a World War II veteran, a former officer of the 107th Infantry Regiment and the best friend of Steve Rogers since childhood. After resurfacing in 2014 from his presumed death, he now once again fights along side his war veteran and friend Steve Rogers.",
 		movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/4/41/Winter_Soldier_AIW_Profile.jpg/revision/latest?cb=20180525203553",
 		comicLook: "https://terrigen-cdn-dev.marvel.com/content/prod/1x/wintersoldier001_cvr.jpg"
-	}
+	},
+    {
+        name: "Floyd Lawton",
+        altEgo: "Deadshot",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: [],
+        powers: ["Projectiles"],
+        background: "Floyd Lawton, known as Deadshot, is considered the most wanted hitman in the world. After his capture by Batman, Lawton was imprisoned in Belle Reve, where he was later recruited by Amanda Waller to join the government-sanctioned Task Force X. His success on the force allowed him to reduce his prison time.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/3/31/Deadshot_first_look.png/revision/latest?cb=20150504024630",
+        comicLook: "https://img.cinemablend.com/cb/7/5/c/7/a/e/75c7ae8f1e794ea56237022938b63962e8beb64a3f2b8f9f5fff6e2a799bfd69.jpg"
+    },
+    {
+        name: "Harleen Quinzel",
+        altEgo: "Harley Quinn",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: ["Batman"],
+        powers: ["Skilled Combatant"],
+        background: "Doctor Harleen Frances Quinzel is a former psychiatrist employed at Arkham Asylum and a known associate of the Joker, operating under the alias Harley Quinn. After assisting in the Joker's escape from Arkham, Harleen was submerged in a silo of chemicals at Ace Chemicals, re-emerging as the Joker's right hand woman.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/6/68/Margot_Robbie_as_harley_Quinn.jpg/revision/latest/scale-to-width-down/334?cb=20170109011841",
+        comicLook: "https://i.kinja-img.com/gawker-media/image/upload/s--Ln7ORQFU--/c_scale,f_auto,fl_progressive,q_80,w_800/dcy7batxjotlk3udmokw.png"
+    },
+    {
+        name: "Waylon Jones",
+        altEgo: "Killer Croc",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: [],
+        powers: ["Superhuman Strength", "Skilled Combatant"],
+        background: "Waylon Jones, known as Killer Croc, is a metahuman skilled crocodile wrestler, born with a genetic mutation which gave him reptilian skin, leading to him being nicknamed Killer Croc. He eventually turned to crime, and was chased out of Gotham City by Batman, only to be captured and recruited into Amanda Waller's Suicide Squad.",
+        movieLook: "https://i.kinja-img.com/gawker-media/image/upload/s--Ln7ORQFU--/c_scale,f_auto,fl_progressive,q_80,w_800/dcy7batxjotlk3udmokw.png",
+        comicLook: "https://www.dccomics.com/sites/default/files/GalleryChar_1920x1080_3_BW_10_09_57a3d09cb19d49.72084056.jpg"
+    },
+    {
+        name: "George Harkness",
+        altEgo: "Captain Boomerang",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: [],
+        powers: ["Boomerang", "Skilled Combatant"],
+        background: "George \"Digger\" Harkness was raised in poverty in the Australian town of Kurrumburra, the illegitimate child of an Australian woman and an American toy manufacturer. Harkness learned early how to develop boomerangs into weapons.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/d/de/Captain_Boomerang_-_Promo.jpg/revision/latest/scale-to-width-down/343?cb=20160719174104",
+        comicLook: "http://www3.pictures.zimbio.com/mp/JQKXyzNFrx2l.jpg"
+    },
+    {
+        name: "Chato Santana",
+        altEgo: "El Diablo",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: [],
+        powers: ["Pyrokinesis", "Skilled Combatant"],
+        background: "Chato Santana, also known as El Diablo, was a metahuman criminal of Hispanic descent, and a member of Task Force X. While initially reluctant to use his pyrokinetic powers out of guilt and fear, he would ultimately sacrifice his life in order to defeat Incubus and save the world from Enchantress.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/d/df/Suicide_Squad_-_Poster_-_El_Diablo.jpg/revision/latest/scale-to-width-down/343?cb=20160620233843",
+        comicLook: "https://en.wikipedia.org/wiki/El_Diablo_(comics)#/media/File:El_Diablo_comic_book_cover_(vol._2_no._16).jpg"
+    },
+    {
+        name: "Enchantress",
+        altEgo: "",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: [],
+        powers: ["Superhuman Strength", "Telekinesis", "Teleportation"],
+        background: "Enchantress was an ancient and inter-dimensional mystical being, who possessed the body of June Moone. Initially under Amanda Waller's control, Enchantress was viewed as one of the candidates for Suicide Squad membership, but the malevolent witch swiftly escaped, freeing her brother Incubus and attempting to take over Earth with their combined mystical powers.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/2/29/Enchantress_2.jpg/revision/latest/scale-to-width-down/335?cb=20180123204154",
+        comicLook: "https://en.wikipedia.org/wiki/Enchantress_(DC_Comics)#/media/File:Enchantress_DC_Comics.png"
+    },
+    {
+        name: "Tatsu Yamashiro",
+        altEgo: "Katana",
+        universe: "DCEU",
+        films: ["Suicide Squad"],
+        nemeses: [],
+        powers: ["Skilled Combatant"],
+        background: "Tatsu Yamashiro is a Japanese samurai assassin code-named Katana (after her weapon of choice). Tatsu is an infamous master of swordplay and martial arts, trained to the highest level in the ancient art form. She is a proxy member of the Suicide Squad, and, of note, the only voluntary member as Rick Flag's personal bodyguard.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/3/33/CB14_520_PORTRAIT_015.jpg/revision/latest/scale-to-width-down/322?cb=20161118173951",
+        comicLook: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Tatsu_Yamashiro_%28comic_superheroine%2C_modern_incarnation%29.jpg/250px-Tatsu_Yamashiro_%28comic_superheroine%2C_modern_incarnation%29.jpg"
+    },
+    {
+        name: "Princess Diana",
+        altEgo: "Wonder Woman",
+        universe: "DCEU",
+        films: ["Batman v Superman: Dawn of Justice", "Wonder Woman", "Justice League"],
+        nemeses: [],
+        powers: ["Superhuman Strength", "Superhuman Speed", "Levitation", "Skilled Combatant"],
+        background: "Princess Diana of Themyscira is an Amazonian warrior princess and one of the world's first superheroes, known as Wonder Woman. She is the daughter of Queen Hippolyta and Zeus, king of the Olympians. Born on Themyscira, Diana was raised in paradise, hearing tales of her the Amazons' great task of defeating the God of War, Ares, and bringing peace to the world, ushering in a new era of peace to the world.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/a/a0/Wonder_Woman_in_the_1980s.png/revision/latest/scale-to-width-down/350?cb=20180616110232",
+        comicLook: "https://www.dccomics.com/sites/default/files/dc-Comics_Gallery_20181212__WW_Cv60_5c0b522552f088.84553519.jpg"
+    },
+    {
+        name: "Ares",
+        altEgo: "",
+        universe: "DCEU",
+        films: ["Wonder Woman"],
+        nemeses: [],
+        powers: ["Superhuman Strength"],
+        background: "Ares was the Old God of War, and the most fearsome son of Zeus, who was worshiped by the Ancient Greeks and Romans (though the latter civilization would give him the name Mars)",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/0/05/Ares.png/revision/latest/scale-to-width-down/350?cb=20171104040212",
+        comicLook: "https://static.comicvine.com/uploads/original/5/57746/2557160-ares.png"
+    },
+    {
+        name: "Barry Allen",
+        altEgo: "The Flash",
+        universe: "DCEU",
+        films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League"],
+        nemeses: [],
+        powers: ["Superhuman Speed"],
+        background: "Barry Allen is a student at Central City University who was struck by lightning, gaining the ability to think and move at incredible superhuman speeds. Using these powers, he became the vigilante hero known as the Flash.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Justice_League_-_Flash.jpg/revision/latest/scale-to-width-down/350?cb=20181122000948",
+        comicLook: "https://qph.fs.quoracdn.net/main-qimg-c81e83865d8209a2c679cb22c4e0885f"
+    },
+    {
+        name: "Arthur Curry",
+        altEgo: "Aquaman",
+        universe: "DCEU",
+        films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League", "Aquaman"],
+        nemeses: ["Black Manta"],
+        powers: ["Altantean", "Superhuman Strength", "Superhuman Speed", "HydroKinesis"],
+        background: "Arthur Curry is the King of Atlantis, as well as the superhero known as Aquaman. While initially reserved and content with his isolation from the surface world, Aquaman would eventually be recruited by Batman to join the Justice League in order to help defend Earth against the forces of Steppenwolf and his Parademon army.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/a/a9/Aquaman_Arthur_Curry_Character_Textless_Poster.jpg/revision/latest/scale-to-width-down/337?cb=20181123170241",
+        comicLook: "https://qph.fs.quoracdn.net/main-qimg-463c8074f3fe066718026cf3322f9a4a"
+    },
+    {
+        name: "Victor Stone",
+        altEgo: "Cyborg",
+        universe: "DCEU",
+        films: ["Batman v Superman: Dawn of Justice", "Justice League"],
+        nemeses: [],
+        powers: [],
+        background: "Victor Stone is a former college athlete and football star. Following a horrible accident, his father Silas Stone, was able to save him via the use of a Mother Box that crafted cybernetics onto him. Victor then became known as the superhero Cyborg.",
+        movieLook: "https://vignette.wikia.nocookie.net/dccu/images/b/b5/Cyborg_-_Promotional.png/revision/latest/scale-to-width-down/350?cb=20190326111907",
+        comicLook: "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Cyborg_%28Victor_Stone%29.jpg/250px-Cyborg_%28Victor_Stone%29.jpg"
+    }
 ];
