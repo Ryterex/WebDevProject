@@ -379,7 +379,7 @@ module.exports = [
         universe: "DCEU",
         films: ["Batman v Superman: Dawn of Justice", "Justice League"],
         nemeses: [],
-        powers: [],
+        powers: ["Projectiles"],
         background: "Victor Stone is a former college athlete and football star. Following a horrible accident, his father Silas Stone, was able to save him via the use of a Mother Box that crafted cybernetics onto him. Victor then became known as the superhero Cyborg.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/b/b5/Cyborg_-_Promotional.png/revision/latest/scale-to-width-down/350?cb=20190326111907",
         comicLook: "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Cyborg_%28Victor_Stone%29.jpg/250px-Cyborg_%28Victor_Stone%29.jpg"
