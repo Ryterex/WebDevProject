@@ -396,7 +396,7 @@ module.exports = [
         comicLook: "https://pbs.twimg.com/media/DibcflBV4AAYvv-.jpg"
     },
     {
-        name: "William Batson",
+        name: "Billy Batson",
         altEgo: "Shazam",
         universe: "DCEU",
         films: ["Shazam"],
@@ -419,7 +419,7 @@ module.exports = [
     },
     {
         name: "Gamora",
-        altEgo: "Little One",
+        altEgo: "",
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
@@ -429,19 +429,8 @@ module.exports = [
         comicLook: "https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/17/1524838232-gamora-guardians-of-the-galaxy-comic.jpg?resize=480:*"
     },
     {
-        name: "Venom",
-        altEgo: "Venom",
-        universe: "MCU",
-        films: ["Spiderman 3", "Venom"],
-        nemeses: ["Spider-Man"],
-        powers: ["strength", "wall climbing", "projectiles", "shape-shifting", "long tongue", "spider-sense"],
-        background: "Venom is a goo-like organism from space that was found by Peter Parker. It disguised itself as one of his suits, and upon wearing it, Peter notices that the organism stuck to him. He was eventually able to rid himself of venom, finding out it is scared of fire and sound. Venom finds another host, however, one that shared its hatred of Spider-Man.",
-        movieLook: "https://www.rollingstone.com/wp-content/uploads/2018/10/venom-history-of.jpg?crop=900:600&width=440",
-        comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/425668/425668._SX1280_QL80_TTD_.jpg"
-    },
-    {
         name: "Hela",
-        altEgo: "Hela",
+        altEgo: "",
         universe: "MCU",
         films: ["Thor: Ragnorak"],
         nemeses: ["Thor"],
@@ -496,7 +485,7 @@ module.exports = [
     },
     {
         name: "Rocket Raccoon",
-        altEgo: "Rocket Raccoon",
+        altEgo: "",
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
@@ -507,7 +496,7 @@ module.exports = [
     },
     {
         name: "Vision",
-        altEgo: "Vision",
+        altEgo: "",
         universe: "MCU",
         films: ["Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
@@ -518,7 +507,7 @@ module.exports = [
     },
     {
         name: "Nebula",
-        altEgo: "Nebula",
+        altEgo: "",
         universe: "MCU",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
