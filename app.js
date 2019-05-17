@@ -117,7 +117,6 @@ app.post("/changepassword",async(req,res)=>{
 			res.render("../views/bars/settings",{title: "Settings", css:"settings", js:"settings", status:curuser.status, username:curuser.profile.username, favChar:curuser.profile.favChar, result:"Success!"});}}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
-
 app.get("/logout", async(req, res) => {
 	try{
 		res.cookie("AuthCookie",'',{expires: new Date(0)});
@@ -125,7 +124,6 @@ app.get("/logout", async(req, res) => {
 		req.session.destroy();
 		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
-
 
 /*
 app.get("/details/:id", async (req, res) => {
@@ -139,7 +137,7 @@ app.get("/details/:id", async (req, res) => {
 			address: person.address,
 			zip: person.zip,
 			phone: person.phone,
-			ssn: person.ssn, 
+			ssn: person.ssn,
 			title: "Person Found"});
 	} catch (e) {
 		res.status(404).send();

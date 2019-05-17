@@ -16,7 +16,7 @@ img{display: block;
 	float: right;}
 main{max-width: 75%; margin: auto;}
 h1 {color: white; font-size: 2em;}
-button {color: red; width: 150px;
+button {color: teal; width: 150px;
 	background-color: white;
 	font-weight:lighter;
 	font-size: 16pt}
