@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('form').on('submit',function(event){
+	$('form').on('submit',function(){
 		let newpass=$("#newpassword").val();
 		let cpass=$("#cpassword").val();
 		let oldpass=$("#password").val();
