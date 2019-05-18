@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static(__dirname+"/public"));
-const charList = require("./data/heroes_villains");
+const chars = require("./data/heroes_villains");
 
 app.use(session({
 	name: 'AuthCookie',
@@ -129,7 +129,13 @@ app.get("/logout", async(req, res) => {
 
 app.get("/details/:id", async (req, res) => {
 	try{
-		let chars = await characters();
+		let chars = await charData.getAll();
+		let char = chars[0];
+
+		//console.log(req.params.id);
+		
+		console.log(chars.length);
+		
 		for(var i=0; i<chars.length; i++){
 			if(chars[i]._id === req.params.id){
 				char = chars[i];
@@ -154,6 +160,8 @@ app.get("/details/:id", async (req, res) => {
 app.post("/search", async (req, res) => {
 	try{
 
+		let chars = await charData.getAll();
+
 		let universe = req.body.universe;
 		console.log(universe);
 		let type = req.body.selectedRadioType;
@@ -163,26 +171,26 @@ app.post("/search", async (req, res) => {
 
 		let foundGents = [];
 		if(type==="name"){
-			for(var i=0; i<charList.length; i++){
-				if(charList[i].name.toLowerCase().includes(value.toLowerCase()) || charList[i].altEgo.toLowerCase().includes(value.toLowerCase())){
-					foundGents.push(charList[i]);
+			for(var i=0; i<chars.length; i++){
+				if(chars[i].name.toLowerCase().includes(value.toLowerCase()) || chars[i].altEgo.toLowerCase().includes(value.toLowerCase())){
+					foundGents.push(chars[i]);
 				}
 			}
 		} 
 		else if(type==="power"){
-			for(var i=0; i<charList.length; i++){
-				for(var j=0; j<charList[i].powers.length; j++){
-					if(charList[i].powers[j].toLowerCase().includes(value.toLowerCase())){
-						foundGents.push(charList[i]);
+			for(var i=0; i<chars.length; i++){
+				for(var j=0; j<chars[i].powers.length; j++){
+					if(chars[i].powers[j].toLowerCase().includes(value.toLowerCase())){
+						foundGents.push(chars[i]);
 						break;
 					}
 				}
 			}
 		} else {//type==movie
-			for(var i=0; i< charList.length; i++){
-				for(var j=0; j<charList[i].powers.length; j++){
-					if(charList[i].films[j].toLowerCase().includes(value.toLowerCase())){
-						foundGents.push(charList[i]);
+			for(var i=0; i< chars.length; i++){
+				for(var j=0; j<chars[i].powers.length; j++){
+					if(chars[i].films[j].toLowerCase().includes(value.toLowerCase())){
+						foundGents.push(chars[i]);
 						break;
 					}
 				}
