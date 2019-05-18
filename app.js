@@ -41,7 +41,7 @@ app.use(function(req,res,next){
 	console.log(log);
 	next();});
 
-app.use(["/home/","/settings/","/logout/","/search/","/results/","/details/"],function(req,res,next){
+app.use(["/home/","/settings/","/logout/","/search/","/results/","/details/","changepassword/","/favorite/"], function(req,res,next){
 	if(!req.session.userID){
 		res.status(403).render("../views/bars/denied",{title: "Denied",css:"denied"});}
 	else{next();}});
@@ -132,14 +132,36 @@ app.get("/logout", async(req, res) => {
 		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
+app.post("/favorite",async(req,res)=>{
+	try{
+		console.log(req.body.favChar);
+		let charCollection=await characters();
+		let char=await charCollection.findOne({name:req.body.favChar});
+		console.log(char.name);
+		console.log(char.altEgo);
+		let curuser=await userData.get(req.session.userID);
+		if(char.altEgo!=="-"){
+			await userData.changefav(curuser._id,char.altEgo);}
+		else{await userData.changefav(curuser._id,char.name);}
+		res.render("../views/bars/details", {
+			css: "details",
+			name: char.name,
+			altEgo: char.altEgo,
+			universe: char.universe,
+			nemesis: char.nemeses.join(', '),
+			powers: char.powers.join(', '),
+			movies: char.films.join(', '),
+			background: char.background,
+			movieLook: char.movieLook,
+			comicLook: char.comicLook,
+			title: "Details",
+			result:"Success!"});}
+	catch(e){res.status(500).json({error: "Internal Server Error"});}});
+
 app.get("/details/:id", async (req, res) => {
 	try{
 		let chars = await charData.getAll();
 		let char = chars[0];
-
-
-		console.log(req.params.id);
-
 		for(var i=0; i<chars.length; i++){
 			if(chars[i]._id == req.params.id){
 				char = chars[i];
@@ -151,9 +173,9 @@ app.get("/details/:id", async (req, res) => {
 			name: char.name,
 			altEgo: char.altEgo,
 			universe: char.universe,
-			nemesis: char.nemeses.toString(),
-			powers: char.powers.toString(),
-			movies: char.films.toString(),
+			nemesis: char.nemeses.join(', '),
+			powers: char.powers.join(', '),
+			movies: char.films.join(', '),
 			background: char.background,
 			movieLook: char.movieLook,
 			comicLook: char.comicLook,
@@ -166,14 +188,9 @@ app.get("/details/:id", async (req, res) => {
 app.post("/search", async (req, res) => {
 	try{
 		let chars = await charData.getAll();
-		console.log(chars.length);
 		let universe = req.body.universe;
-		console.log(universe);
 		let type = req.body.selectedRadioType;
-		console.log(type);
 		let value = req.body.selectedRadioValue;
-		console.log(value);
-
 		let foundGents = [];
 		if(type==="name"){
 			for(var i=0; i<chars.length; i++){
@@ -191,9 +208,9 @@ app.post("/search", async (req, res) => {
 					}
 				}
 			}
-		} else {//type==movie
+		} else if(type==="movie"){
 			for(var i=0; i< chars.length; i++){
-				for(var j=0; j<chars[i].powers.length; j++){
+				for(var j=0; j<chars[i].films.length; j++){
 					if(chars[i].universe.toLowerCase()===universe.toLowerCase() && chars[i].films[j].toLowerCase().includes(value.toLowerCase())){
 						foundGents.push(chars[i]);
 						break;

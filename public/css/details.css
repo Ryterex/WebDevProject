@@ -6,7 +6,19 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;}
-
+ul{padding-left:20px;}
+li{padding-bottom: 11px}
+button {color: white; width: 150px;
+	background-color: Transparent;
+	font-weight:lighter;
+	font-size: 16pt;}
+button:hover{
+	background-color: lavender;
+	color: black;}
+img{float: right;
+	position: relative;
+	top: 0}
+#result{color:cyan;display: inline;}
 .topnav {
   overflow: hidden;
   background-color: #7d0808;
@@ -40,6 +52,3 @@ overflow: scroll;
   background: rgba(0, 0, 0, 0.25);
   color: white;
 }
-img{float: right;
-	position: relative;
-	top:-100px;}

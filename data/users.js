@@ -23,7 +23,7 @@ async function create(name,password){
 		status: status,
 		profile:{
 			username: name,
-			favChar: "None selected!"}};
+			favChar: "-"}};
   	const userCollection=await users();
   	const insertInfo = await userCollection.insertOne(user);
   	const newId = insertInfo.insertedId;
@@ -36,6 +36,11 @@ async function changepass(id, newpass) {
   	const updatedInfo = await userCollection.updateOne({ _id: ObjectId(id)},
 		{$set: {hashPass: newhash}});}
 
+async function changefav(id, newfav) {
+  	const userCollection = await users();
+  	const updatedInfo = await userCollection.updateOne({ _id: ObjectId(id)},
+		{$set: {"profile.favChar": newfav}});}
+
 module.exports = {
     firstName: "Chris",
     lastName: "Paldino",
@@ -43,4 +48,5 @@ module.exports = {
     getAll,
     get,
     create,
-	changepass};
+	changepass,
+	changefav};

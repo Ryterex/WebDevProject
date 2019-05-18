@@ -4,12 +4,15 @@
 		  <a href="/logout">Logout</a>
 </div>
 <div class="content">
-<h1>{{title}}</h1>
 <h2>{{name}}</h2>
+<form id="fav-form" method="POST" action="/favorite">
+	<input type="hidden" name="favChar" id="favChar" value="{{name}}"/>
+	<button type="submit">Favorite</button>
+<p id="result">{{result}}</p>
+</form>
 <img src="{{{comicLook}}}" style="width:200px;height:200px;">
 <img src="{{{movieLook}}}" style="width:200px;height:200px;">
 	<ul>
-        <li>Name: {{name}}</li>
         <li>Alter Ego: {{altEgo}}</li>
         <li>Universe: {{universe}}</li>
         <li>Nemeses: {{nemesis}}</li>

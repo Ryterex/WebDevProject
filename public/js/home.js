@@ -67,10 +67,10 @@ $(document).ready(function(){
     	else if (type == "power") {
     		value = $("select.Power").children("option:selected").val();
     	}
-    	else if (type == "movie" && name == "Marvel") {
+    	else if (type == "movie" && uni == "Marvel") {
     		value = $("select.mcu").children("option:selected").val();
     	}
-    	else if (type == "movie" && name == "DC") {
+    	else if (type == "movie" && uni == "DC") {
     		value = $("select.dc").children("option:selected").val();
     	}
     	$("input[name='selectedRadioValue']").val(value);
