@@ -2,9 +2,8 @@
   "name": "webdevproj",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node seed.js & node app.js"
   },
   "author": "Chris Paldino 10412928",
   "license": "ISC",
@@ -16,6 +15,6 @@
     "express-handlebars": "^3.0.2",
     "express-session": "^1.16.1",
     "handlebars": "^4.1.2",
-	"mongodb": "^3.1.13"
+    "mongodb": "^3.1.13"
   }
 }

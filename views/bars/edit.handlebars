@@ -1,0 +1,31 @@
+<div class="topnav">
+          <a class="active" href="/">Home</a>
+          <a href="/settings">Settings</a>
+		  <a href="/logout">Logout</a>
+</div>
+<div class="content">
+<h2>{{name}}</h2>
+<form id="fav-form" method="POST" action="/edit">
+	<input type="hidden" name="oldName" value="{{id}}"/>
+    Name:
+    <input type="text" name="name" value="{{name}}"><br>
+    Alter Ego:
+    <input type="text" name="altEgo" value="{{altEgo}}"><br>
+    Universe:
+    <input type="text" name="universe" value="{{universe}}"><br>
+    Movies (separated by commas):
+    <textarea rows="1" cols="20" type="text" name="movies">{{movies}}</textarea><br>
+    Nemeses (separated by commas):
+    <textarea rows="1" cols="20" type="text" name="nemeses">{{nemeses}}</textarea><br>
+    Powers (separated by commas):
+    <textarea rows="1" cols="20" type="text" name="powers">{{powers}}</textarea><br>
+    Background:
+    <textarea rows="1" cols="20" type="text" name="background">{{background}}</textarea><br>
+    Movie Look (image address):
+    <input type="text" name="movieLook" value="{{movieLook}}"><br>
+    Comic Look (image address):
+    <input type="text" name="comicLook" value="{{comicLook}}"><br>
+	<button type="submit">Submit</button>
+</form>
+<p id="result">{{result}}</p>
+</div>

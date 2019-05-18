@@ -16,11 +16,9 @@ async function get(id) {
 	return user;}
 
 async function create(name,password){
-	let status="Standard User";
-	if(name.toLowerCase()==='mrstark'){status="Admin";}
   	let user = {
 		hashPass: bcrypt.hashSync(password,16),
-		status: status,
+		status: "Standard User",
 		profile:{
 			username: name,
 			favChar: "-"}};
