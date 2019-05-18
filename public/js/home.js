@@ -1,5 +1,10 @@
+//const collections = require("../../data/collections");
+//const characters = collections.characters;
+//const charList = require("../../data/heroes_villains");
+//const {ObjectId} = require('mongodb');
+
 $(document).ready(function(){
-	$("select.uni").change(function(){
+	$("select.uni").change(function() {
 		var universe = $(this).children("option:selected").val();
     	if (universe == "Marvel") {
         	$("#mcu").css({"display":"unset"});
@@ -11,28 +16,44 @@ $(document).ready(function(){
         }
     });
 
-    $('#search').on('submit', function(e) {
-    	let name = $("#personID").val();
-    	let uni = $("select.uni").children("option:selected").val();
-    	let filter = $('input[name=radioName]:checked', '#myForm').val();
-    	let power = "";
-    	let movie = "";
-    	
-    	if (!name) {
-    		$('#error').text("Error: You must input a name!");
-    		return false;
+    $("#myForm input").change(function() {
+    	var radio = $('input[name=radioName]:checked', '#myForm').val();
+    	if (radio == "name") {
+    		$("#personID").css({"display":"unset"});
     	}
-    	
-    	if (filter == "Power") {
-    		power = $("select.power").children("option:selected").val();
+    	else if (radio == "power") {
+    		$("#personID").css({"display":"none"});
     	}
-    	else if (filter == "Movie" && name == "Marvel") {
-    		movie = $("select.mcu").children("option:selected").val();
+    	else if (radio == "movie") {
+    		$("#personID").css({"display":"none"});
     	}
-    	else if (filter == "Movie" && name == "DC") {
-    		movie = $("select.mcu").children("option:selected").val();
-    	}
-    	return true;
     });
+
+/*
+    $('#search').onclick(function(e) {
+    	let uni = $("select.uni").children("option:selected").val();
+    	let type = $('input[name=radioName]:checked', '#myForm').val();
+    	let value = "";
+
+    	if (type == "name") {
+    		let name = $("#personID").val()
+    		if (!name) {
+	    		$('#error').text("Error: You must input a name!");
+	    		return false;
+    		}
+    		value = name;
+    	}
+    	else if (type == "Power") {
+    		value = $("select.power").children("option:selected").val();
+    	}
+    	else if (type == "Movie" && name == "Marvel") {
+    		value = $("select.mcu").children("option:selected").val();
+    	}
+    	else if (type == "Movie" && name == "DC") {
+    		value = $("select.mcu").children("option:selected").val();
+    	}
+    	let results = await charList.search(type, value);
+    	return true;
+    });*/
 });
 

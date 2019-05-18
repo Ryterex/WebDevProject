@@ -7,7 +7,7 @@
 	<h1>Search for a Character</h1>
 	<hr>
 	<br><br>
-	<form method="POST" action="/search" class="search" id="search">
+	<form class="search" id="search">
 		<label for="personID">Who are you looking for?</label>
 		<input type="text" name="personName" id="personID">
 		<button class="button0" type="submit">Search</button>
@@ -22,10 +22,10 @@
 	<br><br>
 	<p>Filters: </p>
 	<form id=myForm>
-		<input type="radio" id="name" name="drone" value="name" checked>
+		<input type="radio" id="name" name="radioName" value="name" checked>
 	  	<label for="name">Name (Default)</label>
 		<div class="divider"></div>
-		<input type="radio" id="power" name="drone" value="power">
+		<input type="radio" id="power" name="radioName" value="power">
 	  	<label for="power">Power</label>
 		<select id="power" class="power">
 		  <option>Skilled fighter</option>
@@ -65,7 +65,7 @@
 		  <option>Goes up Thanos' big purple peach</option>
 		</select>
 		<div class="divider"></div>
-		<input type="radio" id="movie" name="drone" value="movie">
+		<input type="radio" id="movie" name="radioName" value="movie">
 	  	<label for="movie">Movie</label>
 		<select id="mcu" class="mcu">
 		  <option>Iron Man</option>
@@ -101,6 +101,8 @@
 		  <option>Shazam!</option>
 		</select>
 	</form>
+	<ul id="results">
+	</ul>
 	</div>
 	<br><br><br><br><br><br><br><br><br><br>
 
