@@ -548,6 +548,72 @@ async function main(){
         comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/693929/693929._SX360_QL80_TTD_.jpg"
     },
     {
+        name: "Carol Danvers",
+        altEgo: "Captain Marvel",
+        universe:"Marvel",
+        movies: ["Captain Marvel", "Avengers: Endgame"],
+        nemeses: ["-"],
+        powers: ["Flight", "Projectiles"],
+        background: "Captain Carol Danvers, also known as Captain Marvel, is a former United States Air Force pilot who, upon being exposed to the energy of the Tesseract, obtained cosmic powers.",
+        movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/f/fe/CapMarvel-EndgameProfile.jpeg/revision/latest/scale-to-width-down/310?cb=20190423175247",
+        comicLook: "https://images.immediate.co.uk/volatile/sites/3/2018/01/28627f1cb393e26bd26d14a960df182e83269c7d-08eee28.jpg?quality=90&resize=620,413"
+    },
+    {
+        name: "Groot",
+        altEgo: "-",
+        universe:"Marvel",
+        movies: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity Wars", "Avengers: Endgame"],
+        nemeses: ["-"],
+        powers: ["Super strength"],
+        background: "Groot is a sentient, tree-like individual and the accomplice of Rocket Raccoon. Together, the pair had traveled the galaxy picking up bounties until they met Star-Lord and Gamora just before the four of them were captured and put into the Kyln, where they also met Drax the Destroyer.",
+        movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/6/6f/Groot_AIW_Profile.jpg/revision/latest/scale-to-width-down/310?cb=20190326211501",
+        comicLook: "https://static.comicvine.com/uploads/original/0/40/5578907-0%20guardians%20of%20galaxy%20%2316%20lotay%20var.jpg"
+    },
+    {
+        name: "Helmut Zemo",
+        altEgo: "-",
+        universe:"Marvel",
+        movies: ["Captain America: Civil War"],
+        nemeses: ["The Avengers"],
+        powers: ["-"],
+        background: "Colonel Helmut Zemo is a Sokovian citizen turned terrorist mastermind who sought revenge against the Avengers after losing his family in the Battle of Sokovia, becoming obsessed with defeating and destroying them.",
+        movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/4/44/Zemo-ProfilePicture.jpg/revision/latest/scale-to-width-down/310?cb=20160925130847",
+        comicLook: "https://cdn3-www.comingsoon.net/assets/uploads/2015/04/BaronZemo.jpg"
+    },
+    {
+        name: "Erik Killmonger",
+        altEgo: "-",
+        universe:"Marvel",
+        movies: ["Black Panther"],
+        nemeses: ["Black Panther"],
+        powers: ["Skilled fighter","Heightened senses"],
+        background: "N'Jadaka, also known as Erik Stevens, was a former Navy SEAL soldier of Wakandan origin through his father, Prince N'Jobu. His savagery while serving in the US military black-ops unit, earned him the nickname Killmonger.",
+        movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/9/9d/Black_Panther_Textless_Character_Poster_03.jpg/revision/latest/scale-to-width-down/310?cb=20171201051947",
+        comicLook: "https://vignette.wikia.nocookie.net/marveldatabase/images/1/18/Erik_Killmonger_%28Earth-161%29_0001.jpg/revision/latest?cb=20100116021511"
+    },
+    {
+        name: "Sam Wilson",
+        altEgo: "Falcon",
+        universe:"Marvel",
+        movies: ["Captain America: The Winter Soldier", "Avengers: Age of Ultron", "Ant-Man", "Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"],
+        nemeses: ["-"],
+        powers: ["Flight", "Projectiles"],
+        background: "Samuel Thomas \"Sam\" Wilson, better known as Falcon, is a former United States Air Force pararescue airman who left active duty when his wing-man Riley died in combat, choosing instead to begin helping any of his fellow veterans who were suffering from post-traumatic stress disorder at Veterans Affairs.",
+        movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/4/48/Falcon_AIW_Profile.jpg/revision/latest/scale-to-width-down/310?cb=20180518212822",
+        comicLook: "https://i.pinimg.com/originals/86/fd/59/86fd598d9a2ad43f2a0130686c0a8520.jpg"
+    },
+    {
+        name: "Ultron",
+        altEgo: "-",
+        universe:"Marvel",
+        movies: ["Avengers: Age of Ultron"],
+        nemeses: ["The Avengers"],
+        powers: ["Projectiles", "Flight", "Super strength"],
+        background: "Ultron was an Artificial Intelligence Peacekeeping Program created by Tony Stark from the decrypted code derived from the Mind Stone encased within Loki's own Scepter, retooled by himself with the help of Bruce Banner with the intent being to protect Earth from any and all domestic and extraterrestrial threats coming within the future. Ended up turning against The Avengers in a large-scale battle.",
+        movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/2/2b/Ultron_Textless_AoU_Poster.jpg/revision/latest/scale-to-width-down/310?cb=20180318143826",
+        comicLook: "http://geekshizzle.com/wp-content/uploads/2014/03/What_If_Age_of_Ultron_1_Cover.jpg"
+    },
+    {
         name: "Adrian Toomes",
         altEgo: "Vulture",
         universe:"Marvel",
