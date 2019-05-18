@@ -52,7 +52,7 @@ async function main(){
         powers: ["Heightened senses","Super strength","Wall climbing"],
         background: "Peter Benjamin Parker is a high school student who gained spider-like abilities, fighting crime across New York City as the alter ego of Spider-Man, hoping some day he'll live up to his heroes in the Avengers. While Parker juggled all his continued superhero duties with the demands of his high-school life, he was approached by Tony Stark who recruited Spider-Man to join the Avengers Civil War, putting Spider-Man into the brief conflict with his personal hero, Captain America. Parker then agreed and was given his new suit as well as brand new Stark technology in exchange for all his help.",
         movieLook: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/b/b0/Spider-Man_FFH_Profile.jpg/revision/latest?cb=20190326110737",
-        comicLook: "https://en.wikipedia.org/wiki/The_Amazing_Spider-Man#/media/File:AmazingSpider-Man1.jpg"
+        comicLook: "https://d1466nnw0ex81e.cloudfront.net/n_iv/600/1058637.jpg"
     },
     {
         name: "Steve Rogers",
