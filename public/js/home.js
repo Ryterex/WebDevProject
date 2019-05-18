@@ -1,8 +1,3 @@
-//const collections = require("../../data/collections");
-//const characters = collections.characters;
-//const charList = require("../../data/heroes_villains");
-//const {ObjectId} = require('mongodb');
-
 $(document).ready(function(){
 	$("select.uni").change(function() {
 		var universe = $(this).children("option:selected").val();
@@ -30,7 +25,7 @@ $(document).ready(function(){
     });
 
 /*
-    $('#search').onclick(function(e) {
+    $('#search').on("submit", function(e) {
     	let uni = $("select.uni").children("option:selected").val();
     	let type = $('input[name=radioName]:checked', '#myForm').val();
     	let value = "";
@@ -52,8 +47,37 @@ $(document).ready(function(){
     	else if (type == "Movie" && name == "DC") {
     		value = $("select.mcu").children("option:selected").val();
     	}
-    	let results = await charList.search(type, value);
+    	$('')
     	return true;
-    });*/
+    });
+*/
+    function getRadioButtonValue() {
+    	var type = $('input[name=radioName]:checked', '#myForm').val();
+    	$("input[name='selectedRadioType']").val(type);
+    	
+    	let uni = $("select.uni").children("option:selected").val();
+    	var value = "";
+    	if (type == "name") {
+    		let name = $("#personID").val()
+    		if (!name) {
+	    		$('#error').text("Error: You must input a name!");
+	    		return false;
+    		}
+    		value = name;
+    	}
+    	else if (type == "Power") {
+    		value = $("select.power").children("option:selected").val();
+    	}
+    	else if (type == "Movie" && name == "Marvel") {
+    		value = $("select.mcu").children("option:selected").val();
+    	}
+    	else if (type == "Movie" && name == "DC") {
+    		value = $("select.mcu").children("option:selected").val();
+    	}
+    	$("input[name='selectedRadioValue']").val(value);
+    	$("input[name='universe']").val(uni);
+    	return true;
+    }
+
 });
 

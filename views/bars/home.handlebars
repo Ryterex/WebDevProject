@@ -7,9 +7,12 @@
 	<h1>Search for a Character</h1>
 	<hr>
 	<br><br>
-	<form class="search" id="search">
+	<form class="search" method="post" action="/search" id="search" onsubmit='getRadioButtonValue()'>
 		<label for="personID">Who are you looking for?</label>
 		<input type="text" name="personName" id="personID">
+		<input type="hidden" name="universe">
+		<input type="hidden" name="selectedRadioType">
+		<input type="hidden" name="selectedRadioValue">
 		<button class="button0" type="submit">Search</button>
 	</form>
 	<p id="error"></p>
