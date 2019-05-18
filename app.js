@@ -41,7 +41,7 @@ app.use(function(req,res,next){
 	console.log(log);
 	next();});
 
-app.use(["/home/","/settings/","/logout/"],function(req,res,next){
+app.use(["/home/","/settings/","/logout/","/search/","/results/","/details/"],function(req,res,next){
 	if(!req.session.userID){
 		res.status(403).render("../views/bars/denied",{title: "Denied",css:"denied"});}
 	else{next();}});
@@ -147,7 +147,7 @@ app.get("/details/:id", async (req, res) => {
 			}
 		}
 		res.render("../views/bars/details", {
-			css: "found",
+			css: "details",
 			name: char.name,
 			altEgo: char.altEgo,
 			universe: char.universe,
@@ -202,14 +202,9 @@ app.post("/search", async (req, res) => {
 			}
 		}
 
-		if(foundGents != []){
-			res.render("../views/bars/found", {name: value, css: "found", people: foundGents, title: "People Found"});
-		}
-		else{
-			res.render("../views/bars/notfound", {name: value, css: "home", title: "People Found"});
-		}
+		res.render("../views/bars/results", {name: value, css: "results", title: "Results",result: foundGents});
 
-		//console.log(foundGents[0].name);
+
 	} catch (e) {
 		res.status(500).json({error: "Internal Server Error"});
 	}
