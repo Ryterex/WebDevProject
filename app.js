@@ -140,7 +140,8 @@ app.get("/details/:id", async (req, res) => {
 			altEgo: char.altEgo,
 			universe: char.universe,
 			nemesis: char.nemesis,
-			powers: char.powers,
+			powers: char.powers.toString(),
+			movies: char.films.toString(),
 			background: char.background, 
 			title: "Person Found"});
 	} catch (e) {
