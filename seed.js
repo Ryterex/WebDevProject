@@ -562,7 +562,7 @@ async function main(){
         name: "Groot",
         altEgo: "-",
         universe:"Marvel",
-        movies: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity Wars", "Avengers: Endgame"],
+        movies: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["-"],
         powers: ["Super strength"],
         background: "Groot is a sentient, tree-like individual and the accomplice of Rocket Raccoon. Together, the pair had traveled the galaxy picking up bounties until they met Star-Lord and Gamora just before the four of them were captured and put into the Kyln, where they also met Drax the Destroyer.",
