@@ -558,5 +558,6 @@ async function main(){
         movieLook: "https://pixel.nymag.com/imgs/daily/vulture/2017/07/05/05-keaton-spiderman-2.w700.h700.jpg",
         comicLook: "https://pixel.nymag.com/imgs/daily/vulture/2016/12/23/23-spiderman.w700.h700.jpg"
     }]);
-	console.log('Seed successful');}
+	console.log('Seed successful');
+	return;}
 main();
