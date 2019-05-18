@@ -7,3 +7,4 @@ Running instructions:
 - you can register with a new  account or log in with one of the accounts provided
 - standard user credentials: username: "BaronZemo" password: "hailhydra"
 - admin user credentials: username: "MrStark" password: "iamironman"
+- every time the code is compiled, the database will be reinitialized

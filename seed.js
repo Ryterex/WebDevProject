@@ -7,6 +7,8 @@ const connection=require("./data/connection");
 const bcrypt = require ("bcrypt");
 async function main(){
 	const db=await connection();
+	db.collection('users').drop();
+	db.collection('characters').drop();
 	await db.collection('users').insertMany([
 		{hashPass:bcrypt.hashSync("iamironman",16),
 			status: "Admin",
