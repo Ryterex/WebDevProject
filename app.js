@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static(__dirname+"/public"));
+const charList = require("./data/heroes_villains");
 
 app.use(session({
 	name: 'AuthCookie',
@@ -145,25 +146,20 @@ app.get("/details/:id", async (req, res) => {
 			background: char.background, 
 			title: "Person Found"});
 	} catch (e) {
-		res.status(500).json({error: "Internal Server Error"};
+		res.status(500).json({error: "Internal Server Error"});
 	}
 });
 
 app.post("/search", async (req, res) => {
 	try{
-		let charList = require("./data/heroes_villains");
 		let universe = req.body.universe;
 		console.log(universe);
 		let type = req.body.selectedRadioType;
 		console.log(type);
-		let value = req.body.personName;
+		let value = req.body.selectedRadioValue;
 		console.log(value);
 
-		if(type!="name"){
-			value = req.body.selectedRadioValue;
-		}
-
-
+		
 		if(type=="name"){
 			for(var i=0; i<charList.length; i++){
 				if(charList[i].name.toLowerCase().includes(value.toLowerCase())){
@@ -198,15 +194,16 @@ app.post("/search", async (req, res) => {
 				foundGents.push(peopleData[i]);
 			}
 		}*/
+		/*
 		if(foundGents != []){
 			res.render("./views/bars/found", {name: value, people: foundGents, title: "People Found"});
 		}
 		else{
 			res.render("./views/bars/notfound", {name: value, title: "People Found"});
 		}
-		
+		*/
 	} catch (e) {
-		res.status(500).json({error: "Internal Server Error"};
+		res.status(500).json({error: "Internal Server Error"});
 	}
 });
 

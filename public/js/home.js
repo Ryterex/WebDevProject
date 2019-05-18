@@ -51,12 +51,11 @@ $(document).ready(function(){
     	return true;
     });
 */
-    function getRadioButtonValue() {
+    $('#search').on("submit", function(e) {
     	var type = $('input[name=radioName]:checked', '#myForm').val();
-    	$("input[name='selectedRadioType']").val(type);
-    	
     	let uni = $("select.uni").children("option:selected").val();
     	var value = "";
+    	
     	if (type == "name") {
     		let name = $("#personID").val()
     		if (!name) {
@@ -65,19 +64,20 @@ $(document).ready(function(){
     		}
     		value = name;
     	}
-    	else if (type == "Power") {
-    		value = $("select.power").children("option:selected").val();
+    	else if (type == "power") {
+    		value = $("select.Power").children("option:selected").val();
     	}
-    	else if (type == "Movie" && name == "Marvel") {
+    	else if (type == "movie" && name == "Marvel") {
     		value = $("select.mcu").children("option:selected").val();
     	}
-    	else if (type == "Movie" && name == "DC") {
-    		value = $("select.mcu").children("option:selected").val();
+    	else if (type == "movie" && name == "DC") {
+    		value = $("select.dc").children("option:selected").val();
     	}
     	$("input[name='selectedRadioValue']").val(value);
+    	$("input[name='selectedRadioType']").val(type);
     	$("input[name='universe']").val(uni);
     	return true;
-    }
+    });
 
 });
 
