@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "(node seed.js || true) & node app.js"
+    "start": "node seed.js & node app.js"
   },
   "author": "Chris Paldino 10412928",
   "license": "ISC",
