@@ -145,11 +145,70 @@ app.get("/details/:id", async (req, res) => {
 			background: char.background, 
 			title: "Person Found"});
 	} catch (e) {
-		res.status(404).send();
+		res.status(500).json({error: "Internal Server Error"};
 	}
 });
 
+app.post("/search", async (req, res) => {
+	try{
+		let charList = require("./data/heroes_villains");
+		let universe = req.body.universe;
+		console.log(universe);
+		let type = req.body.selectedRadioType;
+		console.log(type);
+		let value = req.body.personName;
+		console.log(value);
 
+		if(type!="name"){
+			value = req.body.selectedRadioValue;
+		}
+
+
+		if(type=="name"){
+			for(var i=0; i<charList.length; i++){
+				if(charList[i].name.toLowerCase().includes(value.toLowerCase())){
+					foundGents.push(charList[i]);
+				}
+			}
+		} else if(type=="power"){
+			for(var i=0; i<charList.length; i++){
+				for(var j=0; i<charList[i].powers.length; j++){
+					if(charList[i].powers[j].toLowerCase().includes(value.toLowerCase())){
+						foundGents.push(charList[i]);
+						break;
+					}
+				}
+			}
+		} else {//type==movie
+			for(var i=0; i< charList.length; i++){
+				for(var j=0; i<charList[i].powers.length; j++){
+					if(charList[i].films[j].toLowerCase().includes(value.toLowerCase())){
+						foundGents.push(charList[i]);
+						break;
+					}
+				}
+			}
+		}
+		/*
+		if(!name){
+			res.status(400).render("../views/posts/nosearch", {title: "People Found"});
+		}
+		for(var i=0; i<peopleData.length && foundGents.length < 20; i++){
+			if(peopleData[i].firstName.toLowerCase().includes(name.toLowerCase()) || peopleData[i].lastName.toLowerCase().includes(name.toLowerCase())){
+				foundGents.push(peopleData[i]);
+			}
+		}*/
+		if(foundGents != []){
+			res.render("./views/bars/found", {name: value, people: foundGents, title: "People Found"});
+		}
+		else{
+			res.render("./views/bars/notfound", {name: value, title: "People Found"});
+		}
+		
+	} catch (e) {
+		res.status(500).json({error: "Internal Server Error"};
+	}
+});
 
 app.listen(3000, () => {
   console.log("We've now got a server!");
