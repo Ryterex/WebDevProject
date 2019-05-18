@@ -129,14 +129,15 @@ app.get("/logout", async(req, res) => {
 
 app.get("/details/:id", async (req, res) => {
 	try{
-		let char = charData[0];
-		for(var i=0; i<charData.length; i++){
-			if(charData._id === req.params.id){
-				char = charData[i];
+		let chars = await characters();
+		for(var i=0; i<chars.length; i++){
+			if(chars[i]._id === req.params.id){
+				char = chars[i];
 				break;
 			}
 		}
 		res.render("../views/bars/details", {
+			css: "home",
 			name: char.name,
 			altEgo: char.altEgo,
 			universe: char.universe,
@@ -152,6 +153,7 @@ app.get("/details/:id", async (req, res) => {
 
 app.post("/search", async (req, res) => {
 	try{
+
 		let universe = req.body.universe;
 		console.log(universe);
 		let type = req.body.selectedRadioType;
@@ -159,16 +161,17 @@ app.post("/search", async (req, res) => {
 		let value = req.body.selectedRadioValue;
 		console.log(value);
 
-		
-		if(type=="name"){
+		let foundGents = [];
+		if(type==="name"){
 			for(var i=0; i<charList.length; i++){
-				if(charList[i].name.toLowerCase().includes(value.toLowerCase())){
+				if(charList[i].name.toLowerCase().includes(value.toLowerCase()) || charList[i].altEgo.toLowerCase().includes(value.toLowerCase())){
 					foundGents.push(charList[i]);
 				}
 			}
-		} else if(type=="power"){
+		} 
+		else if(type==="power"){
 			for(var i=0; i<charList.length; i++){
-				for(var j=0; i<charList[i].powers.length; j++){
+				for(var j=0; j<charList[i].powers.length; j++){
 					if(charList[i].powers[j].toLowerCase().includes(value.toLowerCase())){
 						foundGents.push(charList[i]);
 						break;
@@ -177,7 +180,7 @@ app.post("/search", async (req, res) => {
 			}
 		} else {//type==movie
 			for(var i=0; i< charList.length; i++){
-				for(var j=0; i<charList[i].powers.length; j++){
+				for(var j=0; j<charList[i].powers.length; j++){
 					if(charList[i].films[j].toLowerCase().includes(value.toLowerCase())){
 						foundGents.push(charList[i]);
 						break;
@@ -185,23 +188,15 @@ app.post("/search", async (req, res) => {
 				}
 			}
 		}
-		/*
-		if(!name){
-			res.status(400).render("../views/posts/nosearch", {title: "People Found"});
-		}
-		for(var i=0; i<peopleData.length && foundGents.length < 20; i++){
-			if(peopleData[i].firstName.toLowerCase().includes(name.toLowerCase()) || peopleData[i].lastName.toLowerCase().includes(name.toLowerCase())){
-				foundGents.push(peopleData[i]);
-			}
-		}*/
-		/*
+		
 		if(foundGents != []){
-			res.render("./views/bars/found", {name: value, people: foundGents, title: "People Found"});
+			res.render("../views/bars/found", {name: value, css: "home", people: foundGents, title: "People Found"});
 		}
 		else{
-			res.render("./views/bars/notfound", {name: value, title: "People Found"});
+			res.render("../views/bars/notfound", {name: value, css: "home", title: "People Found"});
 		}
-		*/
+		
+		//console.log(foundGents[0].name);
 	} catch (e) {
 		res.status(500).json({error: "Internal Server Error"});
 	}
