@@ -13,14 +13,16 @@ const users=collections.users;
 const characters=collections.characters;
 const connection=require("./data/connection");
 const bcrypt = require ("bcrypt");
+const chars = require("./data/heroes_villains");
 const app = express();
+const {ObjectId} = require('mongodb');
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static(__dirname+"/public"));
-const chars = require("./data/heroes_villains");
+var create=0;
 
 app.use(session({
 	name: 'AuthCookie',
@@ -94,6 +96,7 @@ app.post("/login", async(req, res) => {
 
 app.get("/home", async(req, res) => {
 	try{
+		if(!create){await charData.create();create=1;}
 		res.render("../views/bars/home",{title: "Home", css: "home",js:"home"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
 
@@ -123,35 +126,38 @@ app.get("/logout", async(req, res) => {
 		res.cookie("AuthCookie",'',{expires: new Date(0)});
 		res.clearCookie("AuthCookie");
 		req.session.destroy();
+		const db=await connection();
+		db.collection("characters").drop();
+		create=0;
 		res.render("../views/bars/bye",{title: "Bye!", css: "bye"});}
 	catch(e){res.status(500).json({error: "Internal Server Error"});}});
-
 
 app.get("/details/:id", async (req, res) => {
 	try{
 		let chars = await charData.getAll();
 		let char = chars[0];
 
-		//console.log(req.params.id);
-		
-		console.log(chars.length);
-		
+
+		console.log(req.params.id);
+
 		for(var i=0; i<chars.length; i++){
-			if(chars[i]._id === req.params.id){
+			if(chars[i]._id == req.params.id){
 				char = chars[i];
 				break;
 			}
 		}
 		res.render("../views/bars/details", {
-			css: "home",
+			css: "found",
 			name: char.name,
 			altEgo: char.altEgo,
 			universe: char.universe,
-			nemesis: char.nemesis,
+			nemesis: char.nemeses.toString(),
 			powers: char.powers.toString(),
 			movies: char.films.toString(),
-			background: char.background, 
-			title: "Person Found"});
+			background: char.background,
+			movieLook: char.movieLook,
+			comicLook: char.comicLook,
+			title: "Details"});
 	} catch (e) {
 		res.status(500).json({error: "Internal Server Error"});
 	}
@@ -159,9 +165,8 @@ app.get("/details/:id", async (req, res) => {
 
 app.post("/search", async (req, res) => {
 	try{
-
 		let chars = await charData.getAll();
-
+		console.log(chars.length);
 		let universe = req.body.universe;
 		console.log(universe);
 		let type = req.body.selectedRadioType;
@@ -172,15 +177,15 @@ app.post("/search", async (req, res) => {
 		let foundGents = [];
 		if(type==="name"){
 			for(var i=0; i<chars.length; i++){
-				if(chars[i].name.toLowerCase().includes(value.toLowerCase()) || chars[i].altEgo.toLowerCase().includes(value.toLowerCase())){
+				if(chars[i].universe.toLowerCase()===universe.toLowerCase() && (chars[i].name.toLowerCase().includes(value.toLowerCase()) || chars[i].altEgo.toLowerCase().includes(value.toLowerCase()))){
 					foundGents.push(chars[i]);
 				}
 			}
-		} 
+		}
 		else if(type==="power"){
 			for(var i=0; i<chars.length; i++){
 				for(var j=0; j<chars[i].powers.length; j++){
-					if(chars[i].powers[j].toLowerCase().includes(value.toLowerCase())){
+					if(chars[i].universe.toLowerCase()===universe.toLowerCase() && chars[i].powers[j].toLowerCase().includes(value.toLowerCase())){
 						foundGents.push(chars[i]);
 						break;
 					}
@@ -189,21 +194,21 @@ app.post("/search", async (req, res) => {
 		} else {//type==movie
 			for(var i=0; i< chars.length; i++){
 				for(var j=0; j<chars[i].powers.length; j++){
-					if(chars[i].films[j].toLowerCase().includes(value.toLowerCase())){
+					if(chars[i].universe.toLowerCase()===universe.toLowerCase() && chars[i].films[j].toLowerCase().includes(value.toLowerCase())){
 						foundGents.push(chars[i]);
 						break;
 					}
 				}
 			}
 		}
-		
+
 		if(foundGents != []){
-			res.render("../views/bars/found", {name: value, css: "home", people: foundGents, title: "People Found"});
+			res.render("../views/bars/found", {name: value, css: "found", people: foundGents, title: "People Found"});
 		}
 		else{
 			res.render("../views/bars/notfound", {name: value, css: "home", title: "People Found"});
 		}
-		
+
 		//console.log(foundGents[0].name);
 	} catch (e) {
 		res.status(500).json({error: "Internal Server Error"});

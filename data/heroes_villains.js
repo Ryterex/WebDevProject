@@ -2,7 +2,7 @@ module.exports = [
     {
         name: "Orm Marius",
         altEgo: "Ocean Master",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Aquaman"],
         nemeses: ["Aquaman"],
         powers: ["Skilled fighter","Heightened senses","Super strength","Atlantean"],
@@ -13,7 +13,7 @@ module.exports = [
     {
         name: "Tony Stark",
         altEgo: "Iron Man",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Iron Man", "The Incredible Hulk", "Iron Man 2", "The Avengers", "Iron Man 3", "Avengers: Age of Ultron", "Captain America: Civil War", "Spider-Man: Homecoming", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Iron Monger", "Whiplash", "Thanos", "Justin Hammer", "Aldrich Killian"],
         powers: ["Projectiles","Flight"],
@@ -24,7 +24,7 @@ module.exports = [
     {
         name: "Peter Parker",
         altEgo: "Spider-Man",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Captain America: Civil War", "Spider-Man: Homecoming", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Vulture"],
         powers: ["Heightened senses","Super strength","Wall climbing"],
@@ -35,7 +35,7 @@ module.exports = [
     {
         name: "Steve Rogers",
         altEgo: "Captain America",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Captain America: The First Avenger", "The Avengers", "Captain America: The Winter Soldier", "Avengers: Age of Ultron", "Captain America: Civil War", "Spider-Man: Homecoming","Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Red Skull"],
         powers: ["Skilled fighter","Heightened senses","Super strength"],
@@ -46,7 +46,7 @@ module.exports = [
     {
         name: "Dru-Zod",
         altEgo: "General Zod",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Man of Steel", "Batman v Superman: Dawn of Justice"],
         nemeses: ["Superman"],
         powers: ["Super speed","Super strength","Flight","Eye lasers","Skilled fighter","Kryptonian"],
@@ -57,7 +57,7 @@ module.exports = [
     {
         name: "Bruce Wayne",
         altEgo: "Batman",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League"],
         nemeses: ["Joker", "Penguin"],
         powers: ["Skilled fighter","Detective","Heightened senses"],
@@ -68,7 +68,7 @@ module.exports = [
     {
         name: "Unknown",
         altEgo: "Joker",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: ["Batman"],
         powers: [],
@@ -79,10 +79,10 @@ module.exports = [
     {
         name: "Clark Kent",
         altEgo: "Superman",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Man of Steel", "Batman v Superman: Dawn of Justice", "Justice League", "Shazam!"],
         nemeses: ["Lex Luther", "General Zod", "Doomsday"],
-        powers: ["Super strengh","Super Speed", "Flight", "Frost Breath", "Heightened senses","Kryptonian", "Eye lasers"],
+        powers: ["Super strength","Super Speed", "Flight", "Frost Breath", "Heightened senses","Kryptonian", "Eye lasers"],
         background: "Clark Joseph Kent, born with the Kryptonian name Kal-El, is an incredibly powerful alien superhero of the House of El, one of the extremely few survivors of the destruction of Krypton, and an investigative reporter of the Daily Planet. In addition, Kal-El is the first Kryptonian of natural birth in centuries and the host of the Growth Codex and the leader of the Justice League.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/6/6b/Henry_Cavill_as_Superman.png/revision/latest?cb=20181121235327",
         comicLook: "https://upload.wikimedia.org/wikipedia/en/a/a9/Cover_of_Superman_Comic_1st_Edition_-_Summer_1939.jpg"
@@ -90,7 +90,7 @@ module.exports = [
     {
         name: "King T'Challa",
         altEgo: "Black Panther",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Captain America: Civil War", "Black Panther", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Killmonger"],
         powers: ["Skilled fighter","Heightened senses"],
@@ -101,7 +101,7 @@ module.exports = [
     {
         name: "Thor Odinson",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Thor", "The Avengers", "Thor: The Dark World", "Avengers: Age of Ultron", "Thor: Ragnarok", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Loki", "Thanos"],
         powers: ["Asgardian","Super strength","Skilled fighter","God of Thunder"],
@@ -112,7 +112,7 @@ module.exports = [
 	{
 		name:"Obadiah Stane",
 		altEgo:"Iron Monger",
-		universe:"MCU",
+		universe:"Marvel",
 		films: "Iron Man",
 		nemeses:["Iron Man"],
 		powers: ["Projectiles","Flight"],
@@ -123,7 +123,7 @@ module.exports = [
 	{
 		name: "Bruce Banner",
 		altEgo:"Hulk",
-		universe:"MCU",
+		universe:"Marvel",
 		films: ["The Incredible Hulk","The Avengers","Avengers: Age of Ultron","Thor: Ragnarok","Avengers: Infinity War","Avengers: Endgame"],
 		nemeses:["Abomination"],
 		powers: ["Super strength"],
@@ -134,10 +134,10 @@ module.exports = [
 	{
 		name:"Emil Blonsky",
 		altEgo:"Abomination",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["The Incredible Hulk"],
 		nemeses:["Hulk"],
-		powers:["Super strengh"],
+		powers:["Super strength"],
 		background:"A Russian-born office lusting for Hulk's power, Blonsky volunteers to undergo experiments involving numerous serums that transform into a creature more powerful than the Hulk known as Abomination",
 		movieLook:"https://oyster.ignimgs.com/mediawiki/apis.ign.com/marvel-studios-cinematic-universe/9/99/The_Abomination.png?width=640",
 		comicLook:"https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Abomination_%28Emil_Blonsky%29.jpg/250px-Abomination_%28Emil_Blonsky%29.jpg"
@@ -145,7 +145,7 @@ module.exports = [
 	{
 		name: "James Rhodes",
 		altEgo:"War Machine",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Iron Man", "Iron Man 2","Iron Man 3","Avengers: Age of Ultron","Captain America: Civil War","Avengers: Infinity War", "Avengers:Endgame"],
 		nemeses:[],
 		powers: ["Projectiles","Flight"],
@@ -156,7 +156,7 @@ module.exports = [
 	{
 		name:"Natasha Romanoff" ,
 		altEgo:"Black Widow",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Iron Man 2","The Avengers","Captain America: The Winter Solider", "Avengers: Age of Ultron","Captain America:Civil War","Avengers: Infinity War","Avengers:Endgame"],
 		nemeses:[],
 		powers:["Skilled fighter","Heightened senses"],
@@ -167,7 +167,7 @@ module.exports = [
 	{
 		name:"Justin Hammer",
 		altEgo:"",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Iron Man 2"],
 		nemeses:["Iron Man"],
 		powers:[],
@@ -178,7 +178,7 @@ module.exports = [
 	{
 		name:"Ivan Vanko" ,
 		altEgo:"Whiplash",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Iron Man 2"],
 		nemeses:["Iron Man"],
 		powers:[],
@@ -189,7 +189,7 @@ module.exports = [
 	{
 		name: "Loki Laufeyson",
 		altEgo:"",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Thor","The Avengers","Thor: The Dark World","Thor Ragnarok","Avengers: Infinity War","Avengers: Endgame"],
 		nemeses:["Thor","The Avengers"],
 		powers:["Asgardian","Skilled sorcerer"],
@@ -200,7 +200,7 @@ module.exports = [
 	{
 		name: "Johann Schmidt",
 		altEgo:"Red Skull",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Captain America: The First Avenger", "Avengers: Infinity War","Avengers: Endgame"],
 		nemeses:["Captain America"],
 		powers:["Super strength","Skilled fighter","Heightened senses"],
@@ -211,7 +211,7 @@ module.exports = [
 	{
 		name:"Clint Barton" ,
 		altEgo:"Hawkeye",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Thor","The Avengers","Avengers: Age of Ultron","Captain America: Civil War","Avengers: Endgame"],
 		nemeses:[],
 		powers:["Skilled fighter","Skilled archer"],
@@ -222,7 +222,7 @@ module.exports = [
 	{
 		name:"Aldrich Killian",
 		altEgo:"Mandarin",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Iron Man 3"],
 		nemeses:["Iron Man"],
 		powers:["Super strength, Heat powers"],
@@ -233,7 +233,7 @@ module.exports = [
 	{
 		name:"Malekith" ,
 		altEgo:"",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Thor: The Dark World"],
 		nemeses:["Thor"],
 		powers:["Skilled fighter"],
@@ -244,7 +244,7 @@ module.exports = [
 	{
 		name: "Bucky Barnes",
 		altEgo:"Winter Soldier",
-		universe:"MCU",
+		universe:"Marvel",
 		films:["Captain America: The First Avenger","Captain America: The Winter Soldier","Captain America: Civil War","Black Panther","Avengers: Infinity War","Avengers: Endgame"],
 		nemeses:[],
 		powers: ["Skilled fighter","Heightened senses","Super strength"],
@@ -255,7 +255,7 @@ module.exports = [
     {
         name: "Floyd Lawton",
         altEgo: "Deadshot",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: [],
         powers: ["Projectiles"],
@@ -266,7 +266,7 @@ module.exports = [
     {
         name: "Harleen Quinzel",
         altEgo: "Harley Quinn",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: ["Batman"],
         powers: ["Skilled fighter"],
@@ -277,7 +277,7 @@ module.exports = [
     {
         name: "Waylon Jones",
         altEgo: "Killer Croc",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: [],
         powers: ["Super strength", "Skilled fighter"],
@@ -288,7 +288,7 @@ module.exports = [
     {
         name: "George Harkness",
         altEgo: "Captain Boomerang",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: [],
         powers: ["Boomerang", "Skilled fighter"],
@@ -299,7 +299,7 @@ module.exports = [
     {
         name: "Chato Santana",
         altEgo: "El Diablo",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: [],
         powers: ["Pyrokinesis", "Skilled fighter"],
@@ -310,7 +310,7 @@ module.exports = [
     {
         name: "Enchantress",
         altEgo: "",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: [],
         powers: ["Super strength", "Telekinesis", "Teleportation"],
@@ -321,7 +321,7 @@ module.exports = [
     {
         name: "Tatsu Yamashiro",
         altEgo: "Katana",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Suicide Squad"],
         nemeses: [],
         powers: ["Skilled fighter"],
@@ -332,7 +332,7 @@ module.exports = [
     {
         name: "Princess Diana",
         altEgo: "Wonder Woman",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Batman v Superman: Dawn of Justice", "Wonder Woman", "Justice League"],
         nemeses: [],
         powers: ["Super strength", "Super speed", "Levitation", "Skilled fighter"],
@@ -343,7 +343,7 @@ module.exports = [
     {
         name: "Ares",
         altEgo: "",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Wonder Woman"],
         nemeses: [],
         powers: ["Super strength"],
@@ -354,21 +354,21 @@ module.exports = [
     {
         name: "Barry Allen",
         altEgo: "The Flash",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League"],
         nemeses: [],
         powers: ["Super speed"],
-        background: "Barry Allen is a student at Central City University who was struck by lightning, gaining the ability to think and move at incredible superhuman speeds. Using these powers, he became the vigilante hero known as the Flash.",
+        background: "Barry Allen is a student at Central City University who was struck by lightning, gaining the ability to think and move at incredible Super speeds. Using these powers, he became the vigilante hero known as the Flash.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Justice_League_-_Flash.jpg/revision/latest/scale-to-width-down/350?cb=20181122000948",
         comicLook: "https://qph.fs.quoracdn.net/main-qimg-c81e83865d8209a2c679cb22c4e0885f"
     },
     {
         name: "Arthur Curry",
         altEgo: "Aquaman",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Batman v Superman: Dawn of Justice", "Suicide Squad", "Justice League", "Aquaman"],
         nemeses: ["Black Manta"],
-        powers: ["Altantean", "Super strength", "Super speed", "HydroKinesis"],
+        powers: ["Atlantean", "Super strength", "Super speed", "Hydrokinesis"],
         background: "Arthur Curry is the King of Atlantis, as well as the superhero known as Aquaman. While initially reserved and content with his isolation from the surface world, Aquaman would eventually be recruited by Batman to join the Justice League in order to help defend Earth against the forces of Steppenwolf and his Parademon army.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/a/a9/Aquaman_Arthur_Curry_Character_Textless_Poster.jpg/revision/latest/scale-to-width-down/337?cb=20181123170241",
         comicLook: "https://qph.fs.quoracdn.net/main-qimg-463c8074f3fe066718026cf3322f9a4a"
@@ -376,7 +376,7 @@ module.exports = [
     {
         name: "Victor Stone",
         altEgo: "Cyborg",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Batman v Superman: Dawn of Justice", "Justice League"],
         nemeses: [],
         powers: ["Projectiles"],
@@ -387,7 +387,7 @@ module.exports = [
     {
         name: "David Kane",
         altEgo: "Black Manta",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Aquaman"],
         nemeses: ["Aquaman"],
         powers: ["Super Strength"],
@@ -398,10 +398,10 @@ module.exports = [
     {
         name: "Billy Batson",
         altEgo: "Shazam",
-        universe: "DCEU",
+        universe:"DC",
         films: ["Shazam"],
         nemeses: [],
-        powers: ["Superhuman Strength", "Super Speed", "Flight", "Lightning"],
+        powers: ["Super strength", "Super Speed", "Flight", "Lightning"],
         background: "William \"Billy\" Batson, known as Shazam, is an orphan chosen by the wizard Shazam to be his champion, granting him immense power to defend the innocent from evil.",
         movieLook: "https://vignette.wikia.nocookie.net/dccu/images/7/77/Shazam_promotional_image.jpg/revision/latest/scale-to-width-down/350?cb=20180523181032",
         comicLook: "https://www.dccomics.com/sites/default/files/imce/2018/12-DEC/Shazam1_1_5c089015b51a86.49890073.jpg"
@@ -409,10 +409,10 @@ module.exports = [
     {
         name: "Peter Quill",
         altEgo: "Star-Lord",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Ronan", "Thanos"],
-        powers: ["Skilled fighter", "Flight", "Space helmet", "Projectiles"],
+        powers: ["Skilled fighter", "Flight","Projectiles"],
         background: "Peter Quill was born in Missouri to a human mom and a Celestial. He was one of many born by the Celestial, whose plan was to create a second Celestial. Shortly after the death of Peter's mother, Peter was abducted by a group called the Ravagers. Yondu, the leader took him in as part of the crew and taught him combat and survival skills.",
         movieLook: "https://static.tvtropes.org/pmwiki/pub/images/starlordinfinitywar.png",
         comicLook: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/119015/DIG024434_1._SX360_QL80_TTD_.jpg"
@@ -420,7 +420,7 @@ module.exports = [
     {
         name: "Gamora",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
         powers: ["Skilled fighter", "Super strength"],
@@ -431,7 +431,7 @@ module.exports = [
     {
         name: "Hela",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Thor: Ragnorak"],
         nemeses: ["Thor"],
         powers: ["Super strength", "Magic", "Mjolnir"],
@@ -442,18 +442,18 @@ module.exports = [
     {
         name: "Drax",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos","Ronan"],
         powers: ["Super strength", "Resilience", "Skilled fighter"],
-        background: "Arthur Miller was a human whose family was killed by Thanos. Kronos needed a champion to battle Thanos, so he put Arthur's spirit in a more capable body.",
+        background: "In response to Ronan killing his family under Thanos' order, Drax becomes a member of the Guardians of the Galaxy to avenge their deaths.",
         movieLook: "https://cdn3.movieweb.com/i/article/WK46qR95CkQJxI4pmfUll14nh6XIeI/798:50/How-Thanos-Killed-Drax-Family-Infinity-War.jpg",
         comicLook: "https://i.annihil.us/u/prod/marvel/i/mg/c/c0/57dc0f9e9dc31/clean.jpg"
     },
     {
        name: "Stephen Strange",
        altEgo: "Doctor Strange",
-       universe: "MCU",
+       universe:"Marvel",
        films: ["Doctor Strange", "Avengers: Infinity War", "Avengers: Endgame"],
        nemeses: ["Dormammu"],
        powers: ["Magic", "Foresight"],
@@ -464,7 +464,7 @@ module.exports = [
     {
         name: "Thanos",
         altEgo: "Thanos",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["The Avengers"],
         powers: ["Super strength", "Finger-snapping", "Intelligence"],
@@ -475,7 +475,7 @@ module.exports = [
     {
         name: "Wanda Maximoff",
         altEgo: "Scarlet Witch",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Captain America: Winter Soldier", "Captain America: Civil War", "Averngers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
         powers: ["Magic"],
@@ -486,18 +486,18 @@ module.exports = [
     {
         name: "Rocket Raccoon",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
         powers: ["Projectiles", "Agility", "Intelligence"],
         background: "Rocket is a raccoon, but was the result of an experient that gave him increased speed and agility and human-like intelligence and speech.",
         movieLook: "https://snworksceo.imgix.net/car/614a86c8-405f-4fd8-b60d-93998c769661.sized-1000x1000.jpg?w=800",
-        comicLook: "https://cdn.nexternal.com/dreamland/images/rocket_1_peterson.jpg"  
+        comicLook: "https://cdn.nexternal.com/dreamland/images/rocket_1_peterson.jpg"
     },
     {
         name: "Vision",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
         powers: ["Intelligence", "Flight", "Magic"],
@@ -508,10 +508,10 @@ module.exports = [
     {
         name: "Nebula",
         altEgo: "",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame"],
         nemeses: ["Thanos"],
-        powers: ["Skilled fighter", "Projetciles", "Agility"],
+        powers: ["Skilled fighter", "Agility"],
         background: "Like her sister Gamora, Nebula was asdopted by Thanos as a child and learned and served under Ronan. She would often spar with Gamora, but would lose everytime, which disappointed Thanos, who decided to infuse her with mechanical parts.",
         movieLook: "https://imgix.bustle.com/2017/5/3/edd9f1b6-7863-4d8d-87dd-11ed65c1ac5a.png?w=970&h=546&fit=crop&crop=faces&auto=format&q=70",
         comicLook: "https://terrigen-cdn-dev.marvel.com/content/prod/1x/043neb_com_inl_06.jpg"
@@ -519,7 +519,7 @@ module.exports = [
     {
         name: "Scott Lan",
         altEgo: "Ant-Man",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Ant-Man", "Ant-Man and the Wasp", "Avengers: Endgame"],
         nemeses: ["Thanos"],
         powers: ["Shrinking", "Super strength", "Goes up Thanos' big purple peach"],
@@ -530,7 +530,7 @@ module.exports = [
     {
         name: "Adrian Toomes",
         altEgo: "Vulture",
-        universe: "MCU",
+        universe:"Marvel",
         films: ["Spider-Man: Homecoming"],
         nemeses: ["Spider-Man"],
         powers: ["Flight", "Super strength"],

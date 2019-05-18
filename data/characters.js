@@ -18,7 +18,8 @@ async function get(id) {
 async function create(){
 	const charCollection = await characters();
 	for(var i=0; i< charList.length; i++){
-		const insertInfo = await userCollection.insertOne(charList[i]);
+		if(!await charCollection.findOne({ name: charList[i].name})){
+			const insertInfo = await charCollection.insertOne(charList[i]);}
 		//if (insertInfo.insertedCount === 0){throw "Could not add character";}
 	}
 }
@@ -119,7 +120,6 @@ async function update(ogname, newname, alt, uni, film, enemies, power, bg, movie
 		throw "Could not update successfully.";
 	}
 }
-
 module.exports = {
 	getAll,
 	get,

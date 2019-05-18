@@ -55,7 +55,7 @@ $(document).ready(function(){
     	var type = $('input[name=radioName]:checked', '#myForm').val();
     	let uni = $("select.uni").children("option:selected").val();
     	var value = "";
-    	
+
     	if (type == "name") {
     		let name = $("#personID").val()
     		if (!name) {
@@ -80,4 +80,3 @@ $(document).ready(function(){
     });
 
 });
-
