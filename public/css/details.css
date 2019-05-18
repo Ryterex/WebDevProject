@@ -16,10 +16,9 @@ button:hover{
 	background-color: lavender;
 	color: black;}
 img{float: right;
-	position: relative;
 	top: 0;
 	width: 200px;
-	height: 200px}
+	height: 200px;}
 #result{color:cyan;display: inline;}
 .topnav {
   overflow: hidden;
